@@ -1,0 +1,48 @@
+.info {
+  width: 2561px;
+  height: 836px;
+  background-color: #a484ff;
+  .wonders {
+    width: 2561px;
+    height: 416px;
+    text-align: center;
+    em {
+      display: block;
+      width: 1672px;
+      height: 124px;
+      margin: 0px auto;
+      padding-top: 108px;
+      font: normal 600 44px "Pretendard-SemiBold";
+      line-height: 140%;
+    }
+    p {
+      width: 568px;
+      height: 48px;
+      margin: 0px auto;
+      padding-top: 28px;
+      font: normal 500 16px "Pretendard-Medium";
+      line-height: 150%;
+    }
+  }
+  .description {
+    display: flex;
+    width: 2561px;
+    height: 420px;
+    border-top: 1px solid #4f4372;
+    .cell {
+      flex: 1;
+      padding-top: 32px;
+      padding-left: 40px;
+      border-right: 1px solid #4f4372;
+      em {
+        height: 24px;
+        font: normal 600 20px "Pretendard-SemiBold";
+      }
+      p {
+        width: 774px;
+        height: 81px;
+        font: normal 500 18px "Pretendard-Medium";
+      }
+    }
+  }
+}

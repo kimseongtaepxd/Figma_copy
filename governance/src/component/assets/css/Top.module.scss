@@ -1,0 +1,54 @@
+.top {
+  display: flex;
+  position: relative;
+  width: 2561px;
+  height: 970px;
+  border-top: 1px solid #464646;
+  .left {
+    width: 1280.5px;
+    height: 970px;
+    text-align: left;
+    border-right: 1px solid #464646;
+    .leftBox {
+      padding-left: 40px;
+      padding-top: 60px;
+      color: #fff;
+      em {
+        display: block;
+        width: 1175px;
+        height: 318px;
+        font: normal 500 88px "Pretendard-Medium";
+        line-height: 120%;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      p {
+        width: 551px;
+        height: 108px;
+        margin-top: 20px;
+        font: normal 500 18px "Pretendard-Medium";
+        line-height: 150%;
+      }
+    }
+    .scroll {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      left: 40px;
+      bottom: 53px;
+      width: 69px;
+      height: 21px;
+      gap: 4px;
+      font: normal 500 14px "Pretendarad-Medium";
+      color: #fff;
+      line-height: 150%;
+    }
+  }
+  .right {
+    width: 1280px;
+    height: 970px;
+    background-image: url(../img/bg_top.png);
+    background-size: 970px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
