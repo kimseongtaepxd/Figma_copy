@@ -151,6 +151,15 @@ input {
   display: none;
 }
 
+sup {
+  vertical-align: super;
+  font-size: 0.5em;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: 0.5em;
+}
 /* setting */
 html,
 body {

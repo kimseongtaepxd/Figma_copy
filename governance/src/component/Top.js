@@ -1,4 +1,3 @@
-import { useState } from "react";
 import arw from "./assets/img/ico_arrow.png";
 import styles from "./assets/css/Top.module.scss";
 
