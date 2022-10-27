@@ -6,6 +6,9 @@ import Info from "./component/Info.js";
 import Roles from "./component/Roles.js";
 import Become from "./component/Become.js";
 import Partners from "./component/Partners.js";
+import Roadmap from "./component/Roadmap.js";
+import Moreabout from "./component/Moreabout.js";
+import Footer from "./component/Footer.js";
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
         <Roles />
         <Become />
         <Partners />
+        <Roadmap />
+        <Moreabout />
       </main>
+      <Footer />
     </>
   );
 }

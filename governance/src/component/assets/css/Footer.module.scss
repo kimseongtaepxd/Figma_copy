@@ -1,0 +1,96 @@
+footer {
+  width: 2561px;
+  height: 398px;
+  color: #464646;
+  font: normal 500 12px "Pretendard-Medium";
+  line-height: 150%;
+
+  > img {
+    width: 200px;
+    height: 36px;
+    margin-top: 48px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .title {
+    width: 66px;
+    height: 18px;
+    margin-top: 32px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .sites {
+    display: flex;
+    height: 24px;
+    margin-top: 8px;
+    padding-bottom: 46px;
+    border-bottom: 1px solid #303030;
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 20px;
+    li {
+      &:nth-of-type(4) {
+        a::after {
+          width: 82px;
+          height: 19px;
+          padding: 2px 6px;
+          margin-left: 4px;
+          border: 1px solid #b64242;
+          border-radius: 100px;
+          font: normal 400 10px "Pretendard";
+          line-height: 150%;
+          color: #b64242;
+          content: "COMING SOON";
+          text-align: center;
+          vertical-align: top;
+        }
+      }
+      a {
+        flex-wrap: nowrap;
+        font: normal 600 16px "Pretendard-SemiBold";
+        color: #fff;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .menu {
+      display: flex;
+      align-items: center;
+      height: 24px;
+      margin-top: 20px;
+      gap: 24px;
+      margin-left: 40px;
+      img {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .sns {
+      display: flex;
+      width: 240px;
+      height: 32px;
+      margin-top: 20px;
+      margin-right: 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      img {
+        display: block;
+        width: 32px;
+        height: 32px;
+        filter: invert(75%);
+      }
+    }
+  }
+  .copyright {
+    width: 174px;
+    height: 15px;
+    margin-left: 40px;
+    font: normal 400 10px "Pretendard";
+  }
+}

@@ -1,0 +1,94 @@
+.partners {
+  display: flex;
+  justify-content: space-between;
+  width: 2561px;
+  height: 960px;
+  color: #fff;
+  .leftContainer {
+    width: 1034px;
+    height: 121px;
+    margin-top: 40px;
+    margin-left: 40px;
+    > em {
+      width: 1034px;
+      display: block;
+      height: 86px;
+      font: normal 500 72px "Pretendard-Medium";
+      line-height: 120%;
+    }
+    > p {
+      width: 1034px;
+      height: 27px;
+      margin-top: 8px;
+      font: normal 500 18px "Pretendart-Medium";
+      letter-spacing: -0.119px;
+      line-height: 150%;
+    }
+  }
+  .rightContainer {
+    float: right;
+    .cell {
+      display: flex;
+      width: 1280px;
+      height: 239px;
+      border-width: 0px 0px 1px 1px;
+      border-style: solid;
+      border-color: #464646;
+      margin: auto 0px;
+      .logoImg {
+        width: 263px;
+        height: 239px;
+        border-right: 1px solid #464646;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 132px;
+      }
+      .textBox {
+        width: 937px;
+        height: 76px;
+        margin: auto;
+        > a {
+          display: block;
+          height: 24px;
+          font: normal 600 20px "Pretendard-SemiBold";
+          color: #fff;
+          line-height: 120%;
+          img {
+            width: 16px;
+            height: 16px;
+            margin: auto 0px;
+            margin-left: 6px;
+          }
+        }
+        > p {
+          height: 48px;
+          margin-top: 4px;
+          font: normal 500 16px "Pretendard-Medium";
+          color: #d1d1d1;
+          line-height: 150%;
+        }
+      }
+      &:nth-of-type(1) {
+        .logoImg {
+          background-image: url(../img/img_circle.png);
+        }
+      }
+      &:nth-of-type(2) {
+        .logoImg {
+          background-image: url(../img/img_blockdaemon.png);
+        }
+      }
+      &:nth-of-type(3) {
+        .logoImg {
+          background-image: url(../img/img_multichain.png);
+        }
+      }
+      &:nth-of-type(4) {
+        border-bottom: 0px;
+        .logoImg {
+          background-image: url(../img/img_dsrv.png);
+        }
+      }
+    }
+  }
+}
