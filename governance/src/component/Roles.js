@@ -8,14 +8,16 @@ const Roles = () => {
         <div className={styles.cell}>
           <div className={styles.cellImg}></div>
           <div className={styles.celltext}>
-            <em>Integrity & Security</em>
-            <p>
-              As authorized members of node operation, NCPs are responsible for
-              facilitation of infrastucure of hardware
-              <sup>1</sup> as required. They also play a vital role in ensuring
-              integravity and security of the WEMIX network by continuously
-              sharing block information to neighboring nodes.
-            </p>
+            <div>
+              <em>Integrity & Security</em>
+              <p>
+                As authorized members of node operation, NCPs are responsible
+                for facilitation of infrastucure of hardware
+                <sup>1</sup> as required. They also play a vital role in
+                ensuring integravity and security of the WEMIX network by
+                continuously sharing block information to neighboring nodes.
+              </p>
+            </div>
           </div>
         </div>
         <div className={styles.cell}>
@@ -25,7 +27,7 @@ const Roles = () => {
             <p>
               Crucial data and network status for blockchain operation is
               calculated through SPoA<sub>Stake-based Proof of Authority</sub>
-              RAFT<sub>Reliable And Fault Tolerant</sub>consensus algorithm
+              RAFT<sub>Reliable And Fault Tolerant</sub> consensus algorithm
               ensuring consistency of datastores on all nodes in the cluster.
             </p>
           </div>

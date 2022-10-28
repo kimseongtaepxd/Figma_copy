@@ -153,12 +153,12 @@ input {
 
 sup {
   vertical-align: super;
-  font-size: 0.5em;
+  font-size: 0.7em;
 }
 
 sub {
   vertical-align: sub;
-  font-size: 0.5em;
+  font-size: 0.7em;
 }
 /* setting */
 html,

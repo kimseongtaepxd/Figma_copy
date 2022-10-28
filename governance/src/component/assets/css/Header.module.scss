@@ -1,28 +1,88 @@
-header {
-  display: flex;
-  justify-content: space-between;
-  width: 2561px;
-  height: 60px;
-  margin: 0px auto;
-  .logoBox {
-    margin: auto 0px;
-    margin-left: 20px;
-    .logo {
-      width: 36px;
-      height: 36px;
-    }
+@import "./_mixin";
 
-    .writing {
-      width: 156px;
-      height: 20px;
-      margin: 8px 0px;
-      margin-left: 8px;
+@include desktop {
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 2561px;
+    height: 60px;
+    margin: 0px auto;
+    .logoBox {
+      margin: auto 0px;
+      margin-left: 20px;
+      .logo {
+        width: 36px;
+        height: 36px;
+      }
+
+      .writing {
+        width: 156px;
+        height: 20px;
+        margin: 8px 0px;
+        margin-left: 8px;
+      }
+    }
+    .earth {
+      width: 24px;
+      height: 24px;
+      margin: auto 0px;
+      margin-right: 20px;
     }
   }
-  .earth {
-    width: 24px;
-    height: 24px;
-    margin: auto 0px;
-    margin-right: 20px;
+}
+
+@include tablet {
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    .logoBox {
+      margin: auto 0px;
+      margin-left: 20px;
+      .logo {
+        width: 36px;
+        height: 36px;
+      }
+
+      .writing {
+        width: 156px;
+        height: 20px;
+        margin: 8px 0px;
+        margin-left: 8px;
+      }
+    }
+    .earth {
+      width: 24px;
+      height: 24px;
+      margin: auto 0px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@include mobile {
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    .logoBox {
+      margin: auto 0px;
+      margin-left: 20px;
+      .logo {
+        width: 36px;
+        height: 36px;
+      }
+      .writing {
+        display: none;
+      }
+    }
+    .earth {
+      width: 24px;
+      height: 24px;
+      margin: auto 0px;
+      margin-right: 20px;
+    }
   }
 }

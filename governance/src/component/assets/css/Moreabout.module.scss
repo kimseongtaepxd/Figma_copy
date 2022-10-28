@@ -1,110 +1,213 @@
-.moreabout {
-  width: 2561px;
-  height: 1472px;
-  color: #fff;
-  .title {
+@import "./_mixin";
+
+@include desktop {
+  .moreabout {
     width: 2561px;
-    height: 216px;
-    border-bottom: 2px solid #464646;
-    > em {
-      display: block;
-      width: 734px;
-      height: 86px;
-      padding: 65px 0px;
-      margin-left: 40px;
-      line-height: 120%;
-      font: normal 500 72px "Pretendard-Medium";
+    height: 1472px;
+    color: #fff;
+    .title {
+      width: 2561px;
+      height: 216px;
+      border-bottom: 2px solid #464646;
+      > em {
+        display: block;
+        width: 734px;
+        height: 86px;
+        padding: 65px 0px;
+        margin-left: 40px;
+        line-height: 120%;
+        font: normal 500 72px "Pretendard-Medium";
+      }
     }
-  }
-  .communications {
-    display: flex;
-    width: 2561px;
-    height: 274px;
-    border-bottom: 2px solid #464646;
-    > em {
-      display: block;
-      width: 439px;
-      height: 67px;
-      font: normal 600 56px "Pretendard-SemiBold";
-      line-height: 120%;
-      padding: 104px 0px;
-      margin-left: 40px;
-      margin-right: 801px;
-    }
-    .snsIco {
+    .communications {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 256px;
+      width: 2561px;
       height: 274px;
-      border-left: 2px solid #464646;
-      img {
-        width: 150px;
-        height: 150px;
+      border-bottom: 2px solid #464646;
+      > em {
+        display: block;
+        width: 439px;
+        height: 67px;
+        font: normal 600 56px "Pretendard-SemiBold";
+        line-height: 120%;
+        padding: 104px 0px;
+        margin-left: 40px;
+        margin-right: 801px;
+      }
+      .snsIco {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 256px;
+        height: 274px;
+        border-left: 2px solid #464646;
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+    .ecosystem {
+      display: flex;
+      justify-content: space-between;
+      width: 2561px;
+      height: 982px;
+      border-bottom: 2px solid #464646;
+      > em {
+        display: block;
+        width: 656px;
+        height: 67px;
+        font: normal 600 56px "Pretendard-SemiBold";
+        line-height: 120%;
+        margin-left: 40px;
+        padding-top: 40px;
+      }
+      .rightcontainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1281px;
+        height: 982px;
+        .cell {
+          width: 638px;
+          height: 491px;
+          border-width: 0px 0px 2px 2px;
+          border-style: solid;
+          border-color: #464646;
+          .name {
+            height: 45px;
+            margin-top: 60px;
+            margin-left: 60px;
+          }
+          .rightArw {
+            float: right;
+            width: 44px;
+            height: 44px;
+            margin-right: 60px;
+            margin-top: 60px;
+          }
+          p {
+            display: block;
+            width: 520px;
+            margin-top: 40px;
+            margin-left: 60px;
+            font: normal 500 16px "Pretendard-Medium";
+            color: #a7a7a7;
+            line-height: 150%;
+          }
+          &:nth-of-type(4) {
+            > p {
+              &::after {
+                display: block;
+                width: 115px;
+                height: 29px;
+                margin-top: 161px;
+                border: 1px solid #b64242;
+                border-radius: 100px;
+                font: normal 500 14px "Pretendard-Medium";
+                line-height: 29px;
+                color: #b64242;
+                content: "COMING SOON";
+                text-align: center;
+              }
+            }
+          }
+        }
       }
     }
   }
-  .ecosystem {
-    display: flex;
-    justify-content: space-between;
-    width: 2561px;
-    height: 982px;
-    border-bottom: 2px solid #464646;
-    > em {
-      display: block;
-      width: 656px;
-      height: 67px;
-      font: normal 600 56px "Pretendard-SemiBold";
-      line-height: 120%;
-      margin-left: 40px;
-      padding-top: 40px;
+}
+
+@include tablet {
+  .moreabout {
+    color: #fff;
+    .title {
+      border-bottom: 1px solid #464646;
+      > em {
+        display: block;
+        padding: 46px 0px;
+        margin-left: 40px;
+        line-height: 120%;
+        font: normal 500 40px "Pretendard-Medium";
+      }
     }
-    .rightcontainer {
+    .communications {
       display: flex;
-      flex-wrap: wrap;
-      width: 1281px;
-      height: 982px;
-      .cell {
-        width: 638px;
-        height: 491px;
-        border-width: 0px 0px 2px 2px;
-        border-style: solid;
-        border-color: #464646;
-        .name {
-          height: 45px;
-          margin-top: 60px;
-          margin-left: 60px;
+      border-bottom: 1px solid #464646;
+      > em {
+        display: block;
+        flex-basis: calc(50% + 6px);
+        font: normal 600 32px "Pretendard-SemiBold";
+        line-height: 120%;
+        padding: 45px 0px 49px 40px;
+      }
+      .snsIco {
+        display: flex;
+        flex-basis: 10%;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #464646;
+        img {
+          width: 72px;
+          height: 72px;
         }
-        .rightArw {
-          float: right;
-          width: 44px;
-          height: 44px;
-          margin-right: 60px;
-          margin-top: 60px;
-        }
-        p {
-          display: block;
-          width: 520px;
-          margin-top: 40px;
-          margin-left: 60px;
-          font: normal 500 16px "Pretendard-Medium";
-          color: #a7a7a7;
-          line-height: 150%;
-        }
-        &:nth-of-type(4) {
-          > p {
-            &::after {
-              display: block;
-              width: 115px;
-              height: 29px;
-              margin-top: 161px;
-              border: 1px solid #b64242;
-              border-radius: 100px;
-              font: normal 500 14px "Pretendard-Medium";
-              line-height: 29px;
-              color: #b64242;
-              content: "COMING SOON";
-              text-align: center;
+      }
+    }
+    .ecosystem {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #464646;
+      > em {
+        display: block;
+        flex-basis: 50%;
+        font: normal 600 32px "Pretendard-SemiBold";
+        line-height: 120%;
+        margin-left: 40px;
+        padding-top: 40px;
+      }
+      .rightcontainer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        .cell {
+          flex-basis: calc(50% - 2px);
+          min-height: 346px;
+          border-width: 0px 0px 1px 1px;
+          border-style: solid;
+          border-color: #464646;
+          .name {
+            height: 24px;
+            margin-top: 32px;
+            margin-left: 24px;
+          }
+          .rightArw {
+            float: right;
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+            margin-top: 32px;
+          }
+          p {
+            display: block;
+            margin: 24px;
+            font: normal 500 14px "Pretendard-Medium";
+            color: #a7a7a7;
+            line-height: 150%;
+          }
+          &:nth-of-type(4) {
+            > p {
+              &::after {
+                display: block;
+                width: 97px;
+                height: 22px;
+                margin-top: 31px;
+                border: 1px solid #b64242;
+                border-radius: 100px;
+                font: normal 500 12px "Pretendard-Medium";
+                line-height: 22px;
+                color: #b64242;
+                content: "COMING SOON";
+                text-align: center;
+              }
             }
           }
         }

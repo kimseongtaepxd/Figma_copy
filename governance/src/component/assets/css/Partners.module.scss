@@ -1,92 +1,277 @@
-.partners {
-  display: flex;
-  justify-content: space-between;
-  width: 2561px;
-  height: 960px;
-  color: #fff;
-  .leftContainer {
-    width: 1034px;
-    height: 121px;
-    margin-top: 40px;
-    margin-left: 40px;
-    > em {
+@import "./_mixin";
+
+@include desktop {
+  .partners {
+    display: flex;
+    justify-content: space-between;
+    width: 2561px;
+    height: 960px;
+    color: #fff;
+    .leftContainer {
       width: 1034px;
-      display: block;
-      height: 86px;
-      font: normal 500 72px "Pretendard-Medium";
-      line-height: 120%;
-    }
-    > p {
-      width: 1034px;
-      height: 27px;
-      margin-top: 8px;
-      font: normal 500 18px "Pretendart-Medium";
-      letter-spacing: -0.119px;
-      line-height: 150%;
-    }
-  }
-  .rightContainer {
-    float: right;
-    .cell {
-      display: flex;
-      width: 1280px;
-      height: 239px;
-      border-width: 0px 0px 1px 1px;
-      border-style: solid;
-      border-color: #464646;
-      margin: auto 0px;
-      .logoImg {
-        width: 263px;
-        height: 239px;
-        border-right: 1px solid #464646;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 132px;
+      height: 121px;
+      margin-top: 40px;
+      margin-left: 40px;
+      > em {
+        width: 1034px;
+        display: block;
+        height: 86px;
+        font: normal 500 72px "Pretendard-Medium";
+        line-height: 120%;
       }
-      .textBox {
-        width: 937px;
-        height: 76px;
-        margin: auto;
-        > a {
-          display: block;
-          height: 24px;
-          font: normal 600 20px "Pretendard-SemiBold";
-          color: #fff;
-          line-height: 120%;
-          img {
-            width: 16px;
-            height: 16px;
-            margin: auto 0px;
-            margin-left: 6px;
+      > p {
+        width: 1034px;
+        height: 27px;
+        margin-top: 8px;
+        font: normal 500 18px "Pretendart-Medium";
+        letter-spacing: -0.119px;
+        line-height: 150%;
+      }
+    }
+    .rightContainer {
+      float: right;
+      .cell {
+        display: flex;
+        width: 1280px;
+        height: 239px;
+        border-width: 0px 0px 1px 1px;
+        border-style: solid;
+        border-color: #464646;
+        margin: auto 0px;
+        .logoImg {
+          width: 263px;
+          height: 239px;
+          border-right: 1px solid #464646;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 132px;
+        }
+        .textBox {
+          width: 937px;
+          height: 76px;
+          margin: auto;
+          > a {
+            display: block;
+            height: 24px;
+            font: normal 600 20px "Pretendard-SemiBold";
+            color: #fff;
+            line-height: 120%;
+            img {
+              width: 16px;
+              height: 16px;
+              margin: auto 0px;
+              margin-left: 6px;
+            }
+          }
+          > p {
+            height: 48px;
+            margin-top: 4px;
+            font: normal 500 16px "Pretendard-Medium";
+            color: #d1d1d1;
+            line-height: 150%;
           }
         }
-        > p {
-          height: 48px;
-          margin-top: 4px;
-          font: normal 500 16px "Pretendard-Medium";
-          color: #d1d1d1;
-          line-height: 150%;
+        &:nth-of-type(1) {
+          .logoImg {
+            background-image: url(../img/img_circle.png);
+          }
+        }
+        &:nth-of-type(2) {
+          .logoImg {
+            background-image: url(../img/img_blockdaemon.png);
+          }
+        }
+        &:nth-of-type(3) {
+          .logoImg {
+            background-image: url(../img/img_multichain.png);
+          }
+        }
+        &:nth-of-type(4) {
+          border-bottom: 0px;
+          .logoImg {
+            background-image: url(../img/img_dsrv.png);
+          }
         }
       }
-      &:nth-of-type(1) {
-        .logoImg {
-          background-image: url(../img/img_circle.png);
+    }
+  }
+}
+
+@include tablet {
+  .partners {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    .leftContainer {
+      flex-basis: calc(50% - 40px);
+      width: 100%;
+      margin: 40px 36px auto 40px;
+      > em {
+        display: none;
+      }
+      > p {
+        font: normal 500 16px "Pretendart-Medium";
+        letter-spacing: -0.119px;
+        line-height: 150%;
+        &::before {
+          display: block;
+          margin-bottom: 8px;
+          font: normal 500 40px "Pretendard-Medium";
+          line-height: 120%;
+          content: "Meet the WONDERS";
         }
       }
-      &:nth-of-type(2) {
+    }
+    .rightContainer {
+      flex-basis: calc(50% + 40px);
+      float: right;
+      .cell {
+        display: flex;
+        border-width: 0px 0px 1px 1px;
+        border-style: solid;
+        border-color: #464646;
+        margin: auto 0px;
         .logoImg {
-          background-image: url(../img/img_blockdaemon.png);
+          flex-basis: 40%;
+          max-width: 206px;
+          min-height: 239px;
+          border-right: 1px solid #464646;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100px;
+        }
+        .textBox {
+          flex-basis: 60%;
+          padding: 0px 32px;
+          margin: auto 0px;
+          > a {
+            display: block;
+            height: 22px;
+            font: normal 600 18px "Pretendard-SemiBold";
+            color: #fff;
+            line-height: 120%;
+            img {
+              width: 16px;
+              height: 16px;
+              margin-left: 6px;
+              vertical-align: middle;
+            }
+          }
+          > p {
+            margin-top: 4px;
+            font: normal 500 14px "Pretendard-Medium";
+            color: #d1d1d1;
+            line-height: 150%;
+          }
+        }
+        &:nth-of-type(1) {
+          .logoImg {
+            background-image: url(../img/img_circle.png);
+          }
+        }
+        &:nth-of-type(2) {
+          .logoImg {
+            background-image: url(../img/img_blockdaemon.png);
+          }
+        }
+        &:nth-of-type(3) {
+          .logoImg {
+            background-image: url(../img/img_multichain.png);
+          }
+        }
+        &:nth-of-type(4) {
+          border-bottom: 0px;
+          .logoImg {
+            background-image: url(../img/img_dsrv.png);
+          }
         }
       }
-      &:nth-of-type(3) {
-        .logoImg {
-          background-image: url(../img/img_multichain.png);
+    }
+  }
+}
+
+@include mobile {
+  .partners {
+    justify-content: space-between;
+    color: #fff;
+    .leftContainer {
+      padding: 24px 20px;
+      > em {
+        display: none;
+      }
+      > p {
+        font: normal 500 14px "Pretendart-Medium";
+        letter-spacing: -0.119px;
+        line-height: 150%;
+        &::before {
+          display: block;
+          margin-bottom: 12px;
+          font: normal 500 24px "Pretendard-Medium";
+          line-height: 120%;
+          content: "Meet the WONDERS";
         }
       }
-      &:nth-of-type(4) {
-        border-bottom: 0px;
+    }
+    .rightContainer {
+      .cell {
+        border-width: 0px 0px 1px 1px;
+        border-style: solid;
+        border-color: #464646;
+        margin: auto 0px;
         .logoImg {
-          background-image: url(../img/img_dsrv.png);
+          flex-basis: 40%;
+          width: 72px;
+          height: 72px;
+          margin: 32px auto 20px 20px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 72px;
+        }
+        .textBox {
+          flex-basis: 60%;
+          padding: 0px 20px;
+          margin: auto 0px;
+          > a {
+            display: block;
+            height: 19px;
+            font: normal 600 18px "Pretendard-SemiBold";
+            color: #fff;
+            line-height: 120%;
+            img {
+              width: 16px;
+              height: 16px;
+              margin-left: 6px;
+              vertical-align: middle;
+            }
+          }
+          > p {
+            margin-top: 6px;
+            margin-bottom: 32px;
+            font: normal 500 14px "Pretendard-Medium";
+            color: #d1d1d1;
+            line-height: 150%;
+          }
+        }
+        &:nth-of-type(1) {
+          .logoImg {
+            background-image: url(../img/img_circle.png);
+          }
+        }
+        &:nth-of-type(2) {
+          .logoImg {
+            background-image: url(../img/img_blockdaemon.png);
+          }
+        }
+        &:nth-of-type(3) {
+          .logoImg {
+            background-image: url(../img/img_multichain.png);
+          }
+        }
+        &:nth-of-type(4) {
+          border-bottom: 0px;
+          .logoImg {
+            background-image: url(../img/img_dsrv.png);
+          }
         }
       }
     }
