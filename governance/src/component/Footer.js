@@ -1,4 +1,5 @@
 import styles from "./assets/css/Footer.module.scss";
+import { useState } from "react";
 import logo from "./assets/img/img_footer_governance.png";
 import earth from "./assets/img/ico_earth.png";
 import SNS from "./assets/img/ico_sns.png";
@@ -6,11 +7,35 @@ import telegram from "./assets/img/ico_telegram.png";
 import twitter from "./assets/img/ico_twitter.png";
 import youtube from "./assets/img/ico_youtube.png";
 import facebook from "./assets/img/ico_facebook.png";
+import down from "./assets/img/arw_down.png";
 
 const Footer = () => {
+  const [isOpen, setisOpen] = useState(false);
+
+  const toggleearth = () => {
+    setisOpen((isOpen) => !isOpen);
+  };
+
+  const [language, setlanguage] = useState([
+    {
+      id: "language_1",
+      language: "english",
+      content: "English",
+    },
+    { id: "language_2", language: "korean", content: "한국어" },
+  ]);
+
   return (
     <footer>
-      <img src={logo} alt="governance" />
+      <h1>
+        <a href="#governance">
+          <img src={logo} alt="governance" />
+        </a>
+      </h1>
+      <div className={styles.familySites}>
+        Family Sites
+        <img src={down} alt="더보기"></img>
+      </div>
       <div className={styles.title}>Family Sites</div>
       <ul className={styles.sites}>
         <li>
@@ -22,9 +47,7 @@ const Footer = () => {
         <li>
           <a href="#NILE">NILE</a>
         </li>
-        <li>
-          <a href="#WEMIX.Fi">WEMIX.Fi</a>
-        </li>
+        <li>WEMIX.Fi</li>
       </ul>
       <div className={styles.container}>
         <ul className={styles.menu}>
@@ -32,24 +55,59 @@ const Footer = () => {
           <li>Privacy Policy</li>
           <li>Contact</li>
           <li>
-            <img src={earth} alt="지구아이콘" />
+            <img
+              src={earth}
+              onClick={() => toggleearth()}
+              alt="language"
+              className={styles.earth}
+            />
+            <ul className={isOpen ? styles.language : styles.hide}>
+              {language.map((lan) => (
+                <li>
+                  <input
+                    key={lan.language + "_input"}
+                    type="radio"
+                    name="language"
+                    id={lan.language}
+                    value={lan.language}
+                  />
+                  <label
+                    key={lan.language + "_label"}
+                    htmlFor={lan.language}
+                    title={lan.language}
+                  >
+                    {lan.content}
+                  </label>
+                </li>
+              ))}
+            </ul>
           </li>
         </ul>
         <ul className={styles.sns}>
           <li>
-            <img src={SNS} alt="SNS" />
+            <a href="#SNS">
+              <img src={SNS} alt="SNS" />
+            </a>
           </li>
           <li>
-            <img src={telegram} alt="telegram" />
+            <a href="#telegram">
+              <img src={telegram} alt="telegram" />
+            </a>
           </li>
           <li>
-            <img src={twitter} alt="twitter" />
+            <a href="#twitter">
+              <img src={twitter} alt="twitter" />
+            </a>
           </li>
           <li>
-            <img src={youtube} alt="youtube" />
+            <a href="#youtube">
+              <img src={youtube} alt="youtube" />
+            </a>
           </li>
           <li>
-            <img src={facebook} alt="facebook" />
+            <a href="#facebook">
+              <img src={facebook} alt="facebook" />
+            </a>
           </li>
         </ul>
       </div>

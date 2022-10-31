@@ -17,7 +17,7 @@ const Top = () => {
             new layer 1mainnet.
           </p>
         </div>
-        <a src="#sroll" className={styles.scroll}>
+        <a href="#sroll" className={styles.scroll}>
           <img src={arw} alt="아래화살표" />
           SCROLL
         </a>

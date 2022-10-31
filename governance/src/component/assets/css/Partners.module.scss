@@ -33,7 +33,7 @@
       .cell {
         display: flex;
         width: 1280px;
-        height: 239px;
+        height: calc(25% - 1px);
         border-width: 0px 0px 1px 1px;
         border-style: solid;
         border-color: #464646;
@@ -214,9 +214,7 @@
     }
     .rightContainer {
       .cell {
-        border-width: 0px 0px 1px 1px;
-        border-style: solid;
-        border-color: #464646;
+        border-bottom: 1px solid #464646;
         margin: auto 0px;
         .logoImg {
           flex-basis: 40%;

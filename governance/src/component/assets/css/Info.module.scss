@@ -39,22 +39,34 @@
         padding-top: 32px;
         padding-left: 40px;
         border-right: 1px solid #4f4372;
+        &:nth-of-type(1) {
+          .number {
+            &:before {
+              content: "";
+              background-image: url(../img/ico_staking.png);
+              background-size: 72px;
+              background-repeat: no-repeat;
+              background-position: center;
+              margin-right: 8px;
+              width: 72px;
+              height: 72px;
+              display: inline-block;
+            }
+          }
+        }
         em {
           height: 24px;
           font: normal 600 20px "Pretendard-SemiBold";
           line-height: 120%;
         }
-        p {
+        .content {
           width: 774px;
           height: 81px;
           font: normal 500 18px "Pretendard-Medium";
           line-height: 150%;
           margin-bottom: 27px;
         }
-        div {
-          text-align: left;
-        }
-        .staking {
+        .number {
           margin-top: 16px;
           height: 106px;
           font: normal 500 88px "Pretendard-Medium";
@@ -64,23 +76,10 @@
           margin-bottom: 12px;
           align-items: center;
           line-height: 120%;
-          gap: 8px;
-          &::before {
-            content: "";
-            background-image: url(../img/ico_staking.png);
-            background-size: 72px;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 72px;
-            height: 72px;
-            display: inline-block;
-          }
+          text-align: left;
         }
-        .APR {
-          margin-top: 16px;
-          height: 106px;
-          font: normal 500 88px "Pretendard-Medium";
-          margin-bottom: 11px;
+        img {
+          display: none;
         }
         .flexbox {
           width: 100%;
@@ -104,10 +103,38 @@
               font: normal 600 56px "Prentendard-SemiBold";
               line-height: 120%;
             }
+            &:nth-of-type(1) {
+              span {
+                display: flex;
+                gap: 2px;
+                &::after {
+                  width: 16px;
+                  width: 16px;
+                  content: "";
+                  background-image: url(../img/ico_circle.png);
+                  background-size: 16px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
+              b {
+                &::after {
+                  display: block;
+                  height: 21px;
+                  font: normal 500 14px "Pretendard-Medium";
+                  color: #1a1a1a;
+                  line-height: 150%;
+                  content: "1% per WONDER";
+                }
+              }
+            }
           }
         }
       }
     }
+  }
+  label {
+    display: none;
   }
 }
 
@@ -139,48 +166,52 @@
       border-top: 1px solid #4f4372;
       .cell {
         flex: 1;
-        padding: 32px 40px 0px;
+        padding: 32px 40px 40px;
         border-right: 1px solid #4f4372;
+        &:nth-of-type(1) {
+          .number {
+            &:before {
+              content: "";
+              background-image: url(../img/ico_staking.png);
+              background-size: 40px;
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 40px;
+              height: 40px;
+              display: inline-block;
+            }
+          }
+        }
+
         em {
           display: block;
           height: 22px;
           font: normal 600 18px "Pretendard-SemiBold";
           line-height: 120%;
         }
-        p {
+        img {
+          display: none;
+        }
+        .content {
           display: block;
           font: normal 500 16px "Pretendard-Medium";
           line-height: 150%;
-          margin-bottom: 24px;
+          &:nth-of-type(1) {
+            margin-bottom: 24px;
+          }
         }
         div {
           text-align: left;
         }
-        .staking {
+
+        .number {
           margin-top: 16px;
-          height: 58px;
           font: normal 500 48px "Pretendard-Medium";
           display: flex;
-          height: 58px;
           margin-bottom: 12px;
           align-items: center;
           line-height: 120%;
           gap: 8px;
-          &::before {
-            content: "";
-            background-image: url(../img/ico_staking.png);
-            background-size: 40px;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 40px;
-            height: 40px;
-            display: inline-block;
-          }
-        }
-        .APR {
-          margin-top: 16px;
-          font: normal 500 48px "Pretendard-Medium";
-          margin-bottom: 12px;
         }
         .flexbox {
           width: 100%;
@@ -204,6 +235,32 @@
               font: normal 600 32px "Prentendard-SemiBold";
               line-height: 120%;
             }
+            &:nth-of-type(1) {
+              span {
+                display: flex;
+                gap: 2px;
+                &::after {
+                  width: 12px;
+                  width: 12px;
+                  content: "";
+                  background-image: url(../img/ico_circle.png);
+                  background-size: 12px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
+              b {
+                &::after {
+                  display: block;
+                  height: 18px;
+                  font: normal 500 12px "Pretendard-Medium";
+                  color: #1a1a1a;
+                  line-height: 150%;
+                  content: "1% per WONDER";
+                  margin-top: 4px;
+                }
+              }
+            }
           }
         }
       }
@@ -213,109 +270,137 @@
 
 @include mobile {
   .info {
-    width: 2561px;
-    height: 836px;
     background-color: #a484ff;
     .wonders {
-      width: 2561px;
-      height: 416px;
-      text-align: center;
+      text-align: left;
+      padding: 40px 20px;
       em {
         display: block;
-        width: 1672px;
-        height: 124px;
-        margin: 0px auto;
-        padding-top: 108px;
-        font: normal 600 44px "Pretendard-SemiBold";
+        font: normal 600 24px "Pretendard-SemiBold";
         line-height: 140%;
       }
       p {
-        width: 568px;
-        height: 48px;
+        display: block;
         margin: 0px auto;
-        padding-top: 28px;
-        font: normal 500 16px "Pretendard-Medium";
+        padding-top: 20px;
+        font: normal 500 14px "Pretendard-Medium";
         line-height: 150%;
       }
     }
     .description {
-      display: flex;
-      width: 2561px;
-      height: 420px;
-      border-top: 1px solid #4f4372;
+      .hide {
+        display: none;
+      }
       .cell {
-        flex: 1;
-        width: 100%;
-        height: 388px;
-        padding-top: 32px;
-        padding-left: 40px;
-        border-right: 1px solid #4f4372;
-        em {
-          height: 24px;
-          font: normal 600 20px "Pretendard-SemiBold";
+        position: relative;
+        padding: 20px 20px 30px;
+        border-top: 1px solid #1a1a1a;
+        &:nth-of-type(1) {
+          .number {
+            &:before {
+              content: "";
+              background-image: url(../img/ico_staking.png);
+              background-size: 24px;
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 24px;
+              height: 24px;
+              display: inline-block;
+            }
+          }
         }
-        p {
-          width: 774px;
-          height: 81px;
-          font: normal 500 18px "Pretendard-Medium";
+        em {
+          display: block;
+          height: 22px;
+          font: normal 600 16px "Pretendard-SemiBold";
+          line-height: 120%;
+          margin-bottom: 21px;
+        }
+        .content {
+          display: block;
+          font: normal 500 16px "Pretendard-Medium";
           line-height: 150%;
-          margin-bottom: 27px;
+          margin-top: 19px;
+          margin-bottom: 2px;
+          &:nth-of-type(1) {
+            margin-top: 32px;
+          }
         }
         div {
           text-align: left;
         }
-        .staking {
-          margin-top: 16px;
-          height: 106px;
-          font: normal 500 88px "Pretendard-Medium";
+        img {
+          display: block;
+          position: absolute;
+          cursor: pointer;
+          top: 69px;
+          right: 20px;
+          width: 24px;
+          height: 24px;
+        }
+
+        .number {
+          font: normal 500 32px "Pretendard-Medium";
           display: flex;
-          width: 268px;
-          height: 106px;
-          margin-bottom: 12px;
           align-items: center;
           line-height: 120%;
-          gap: 8px;
-          &::before {
-            content: "";
-            background-image: url(../img/ico_staking.png);
-            background-size: 72px;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 72px;
-            height: 72px;
-            display: inline-block;
-          }
-        }
-        .APR {
-          margin-top: 16px;
-          height: 106px;
-          font: normal 500 88px "Pretendard-Medium";
-          margin-bottom: 11px;
+          gap: 4px;
         }
         .flexbox {
           width: 100%;
-          height: 260px;
+          height: 90px;
           display: flex;
           flex-wrap: wrap;
-          margin-top: 19px;
+          margin-top: 17px;
+          justify-content: space-between;
           .flexcontent {
-            flex-basis: 50%;
-            align-content: space-between;
+            width: 25%;
             span {
               display: block;
-              height: 21px;
-              font: normal 500 14px "Pretendard-Medium";
+              font: normal 500 12px "Pretendard-Medium";
               color: #1a1a1a;
               line-height: 150%;
+              &:nth-of-type(2) {
+                max-width: 80px;
+                margin-top: 2px;
+              }
             }
             b {
               width: 100%;
-              height: 67px;
-              font: normal 600 56px "Prentendard-SemiBold";
+              height: 34px;
+              font: normal 600 24px "Prentendard-SemiBold";
               line-height: 120%;
+            }
+            &:nth-of-type(1) {
+              span {
+                display: flex;
+                gap: 2px;
+                &::after {
+                  width: 12px;
+                  width: 12px;
+                  content: "";
+                  background-image: url(../img/ico_circle.png);
+                  background-size: 12px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
+              b {
+                &::after {
+                  display: block;
+                  max-width: 80px;
+                  font: normal 500 12px "Pretendard-Medium";
+                  color: #1a1a1a;
+                  line-height: 150%;
+                  content: "1% per WONDER";
+                }
+              }
             }
           }
         }
+      }
+      .hide {
+        display: none;
       }
     }
   }

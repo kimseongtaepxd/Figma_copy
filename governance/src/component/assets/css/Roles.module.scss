@@ -19,7 +19,7 @@
       height: 474px;
       .cell {
         display: flex;
-        width: 1279px;
+        width: calc(50% - 2px);
         height: 236px;
         border-width: 1px 0px 0px 1px;
         border-style: solid;
@@ -38,29 +38,34 @@
             }
           }
         }
+        .cellImg {
+          width: 240px;
+          height: 236px;
+          border-right: 1px solid #464646;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 200px;
+        }
         &:nth-of-type(2) {
           .cellImg {
             background-image: url(../img/img_consensus.png);
           }
         }
         &:nth-of-type(3) {
+          height: 234px;
           .cellImg {
+            height: 234px;
             background-image: url(../img/img_governance.png);
           }
         }
         &:nth-of-type(4) {
+          height: 234px;
           .cellImg {
+            height: 234px;
             background-image: url(../img/img_validation.png);
           }
         }
-        .cellImg {
-          width: 240px;
-          height: 237px;
-          border-right: 1px solid #464646;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 200px;
-        }
+
         .celltext {
           width: 966px;
           margin: auto 0px;

@@ -11,7 +11,7 @@
       text-align: center;
       b {
         display: block;
-        width: 255px;
+        width: 256px;
         height: 29px;
         font: normal 600 24px "Pretendard-SemiBold";
         line-height: 120%;
@@ -41,7 +41,8 @@
       width: 2561px;
       height: 729px;
       border-top: 1px solid #4f4372;
-      .cell {
+      .cell,
+      .hide {
         flex: 1;
         width: 100%;
         height: 698px;
@@ -74,7 +75,10 @@
           line-height: 140%;
           margin-bottom: 25px;
         }
-        p {
+        div {
+          display: none;
+        }
+        .content {
           width: 773px;
           font: normal 500 18px "Pretendard-Medium";
           line-height: 150%;
@@ -115,7 +119,8 @@
     .description {
       display: flex;
       border-top: 1px solid #4f4372;
-      .cell {
+      .cell,
+      .hide {
         flex: 1;
         padding: 40px 40px 29px 40px;
         border-right: 1px solid #4f4372;
@@ -138,13 +143,16 @@
             }
           }
         }
+        div {
+          display: none;
+        }
         em {
           display: block;
           font: normal 600 24px "Pretendard-SemiBold";
           line-height: 140%;
           margin-bottom: 24px;
         }
-        p {
+        .content {
           font: normal 500 18px "Pretendard-Medium";
           line-height: 150%;
           margin-bottom: 27px;
@@ -158,36 +166,33 @@
   .Roadmap {
     background-color: #a484ff;
     .top {
-      text-align: center;
+      text-align: left;
+      padding: 28px 20px;
       b {
         display: block;
         height: 24px;
         font: normal 600 20px "Pretendard-SemiBold";
         line-height: 120%;
-        margin: 0px auto;
-        padding-top: 79px;
       }
       em {
         display: block;
         margin: 0 auto;
         font: normal 600 32px "Pretendard-SemiBold";
         line-height: 120%;
+        margin-top: 20px;
       }
       p {
         max-width: 793px;
-        margin: 0px auto;
-        padding: 16px 0px 80px;
         font: normal 500 16px "Pretendard-Medium";
         line-height: 150%;
+        margin-top: 20px;
       }
     }
     .description {
-      display: flex;
-      border-top: 1px solid #4f4372;
       .cell {
         flex: 1;
-        padding: 40px 40px 29px 40px;
-        border-right: 1px solid #4f4372;
+        padding: 25px 20px 19px 20px;
+        border-top: 1px solid #1a1a1a;
         &:nth-of-type(1) {
           em {
             display: flex;
@@ -207,16 +212,70 @@
             }
           }
         }
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 32px;
+          div {
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
         em {
           display: block;
           font: normal 600 24px "Pretendard-SemiBold";
           line-height: 140%;
-          margin-bottom: 24px;
         }
-        p {
-          font: normal 500 18px "Pretendard-Medium";
+        .content {
+          font: normal 500 14px "Pretendard-Medium";
           line-height: 150%;
-          margin-bottom: 27px;
+          margin-bottom: 21px;
+        }
+      }
+      .hide {
+        flex: 1;
+        padding: 25px 20px 19px 20px;
+        border-top: 1px solid #1a1a1a;
+        &:nth-of-type(1) {
+          em {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            &:after {
+              display: block;
+              width: 73px;
+              height: 26px;
+              font: normal 500 12px "Pretendard-Medium";
+              text-align: center;
+              color: #fff;
+              line-height: 29px;
+              background-color: #1a1a1a;
+              border-radius: 16px;
+              content: "CURRENT";
+            }
+          }
+        }
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          div {
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+        em {
+          display: block;
+          font: normal 600 24px "Pretendard-SemiBold";
+          line-height: 140%;
+        }
+        .content {
+          display: none;
         }
       }
     }

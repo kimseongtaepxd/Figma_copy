@@ -4,6 +4,7 @@
   header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 2561px;
     height: 60px;
     margin: 0px auto;
@@ -25,8 +26,56 @@
     .earth {
       width: 24px;
       height: 24px;
-      margin: auto 0px;
       margin-right: 20px;
+      cursor: pointer;
+    }
+    .hide {
+      display: none;
+    }
+    .language {
+      position: absolute;
+      background-color: #2e2e2e;
+      left: 2363px;
+      top: 54px;
+      z-index: 1;
+      li {
+        width: 169px;
+        height: 27px;
+        padding: 12px 0px 13px 16px;
+        cursor: pointer;
+        label {
+          display: flex;
+          font: normal 500 18px "Pretendard";
+          color: #fff;
+          line-height: 150%;
+          text-align: left;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+        }
+        input:checked ~ label {
+          &::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            content: "";
+            background-image: url(../img/ico_checked.png);
+            background-size: 24px;
+            margin-right: 10px;
+          }
+        }
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        width: 14px;
+        height: 5px;
+        left: 159px;
+        top: -5px;
+        content: "";
+        background-image: url(../img/notch2.png);
+        background-size: 14px 5px;
+      }
     }
   }
 }
@@ -35,6 +84,7 @@
   header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 60px;
     .logoBox {
@@ -55,8 +105,55 @@
     .earth {
       width: 24px;
       height: 24px;
-      margin: auto 0px;
       margin-right: 20px;
+      cursor: pointer;
+    }
+    .hide {
+      display: none;
+    }
+    .language {
+      position: absolute;
+      background-color: #2e2e2e;
+      right: 14px;
+      top: 54px;
+      z-index: 1;
+      li {
+        width: 169px;
+        height: 24px;
+        padding: 9px 0px 11px 16px;
+        label {
+          display: flex;
+          font: normal 500 16px "Pretendard";
+          color: #fff;
+          line-height: 150%;
+          text-align: left;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+        }
+        input:checked ~ label {
+          &::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            content: "";
+            background-image: url(../img/ico_checked.png);
+            background-size: 24px;
+            margin-right: 10px;
+          }
+        }
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        width: 14px;
+        height: 5px;
+        left: 159px;
+        top: -5px;
+        content: "";
+        background-image: url(../img/notch2.png);
+        background-size: 14px 5px;
+      }
     }
   }
 }
@@ -65,6 +162,7 @@
   header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 60px;
     .logoBox {
@@ -81,8 +179,56 @@
     .earth {
       width: 24px;
       height: 24px;
-      margin: auto 0px;
       margin-right: 20px;
+      cursor: pointer;
+    }
+    .hide {
+      display: none;
+    }
+    .language {
+      position: absolute;
+      background-color: #2e2e2e;
+      right: 14px;
+      top: 54px;
+      z-index: 1;
+      li {
+        width: 169px;
+        height: 24px;
+        padding: 9px 0px 11px 16px;
+        label {
+          display: flex;
+          height: 21px;
+          font: normal 500 14px "Pretendard";
+          color: #fff;
+          line-height: 150%;
+          text-align: left;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+        }
+        input:checked ~ label {
+          &::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            content: "";
+            background-image: url(../img/ico_checked.png);
+            background-size: 24px;
+            margin-right: 10px;
+          }
+        }
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        width: 14px;
+        height: 5px;
+        left: 159px;
+        top: -5px;
+        content: "";
+        background-image: url(../img/notch2.png);
+        background-size: 14px 5px;
+      }
     }
   }
 }

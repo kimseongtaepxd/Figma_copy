@@ -8,7 +8,7 @@
     .title {
       width: 2561px;
       height: 216px;
-      border-bottom: 2px solid #464646;
+      border-bottom: 1px solid #464646;
       > em {
         display: block;
         width: 734px;
@@ -23,7 +23,7 @@
       display: flex;
       width: 2561px;
       height: 274px;
-      border-bottom: 2px solid #464646;
+      border-bottom: 1px solid #464646;
       > em {
         display: block;
         width: 439px;
@@ -34,16 +34,19 @@
         margin-left: 40px;
         margin-right: 801px;
       }
-      .snsIco {
+      .SNSs {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 256px;
-        height: 274px;
-        border-left: 2px solid #464646;
-        img {
-          width: 150px;
-          height: 150px;
+        width: 50%;
+        .snsIco {
+          display: flex;
+          width: 20%;
+          align-items: center;
+          justify-content: center;
+          border-left: 1px solid #464646;
+          img {
+            width: 135px;
+            height: 135px;
+          }
         }
       }
     }
@@ -52,7 +55,7 @@
       justify-content: space-between;
       width: 2561px;
       height: 982px;
-      border-bottom: 2px solid #464646;
+      border-bottom: 1px solid #464646;
       > em {
         display: block;
         width: 656px;
@@ -69,8 +72,8 @@
         height: 982px;
         .cell {
           width: 638px;
-          height: 491px;
-          border-width: 0px 0px 2px 2px;
+          height: 490.5px;
+          border-width: 0px 0px 1px 1px;
           border-style: solid;
           border-color: #464646;
           .name {
@@ -95,6 +98,9 @@
             line-height: 150%;
           }
           &:nth-of-type(4) {
+            .rightArw {
+              display: none;
+            }
             > p {
               &::after {
                 display: block;
@@ -124,8 +130,7 @@
       border-bottom: 1px solid #464646;
       > em {
         display: block;
-        padding: 46px 0px;
-        margin-left: 40px;
+        padding: 46px 40px;
         line-height: 120%;
         font: normal 500 40px "Pretendard-Medium";
       }
@@ -135,20 +140,24 @@
       border-bottom: 1px solid #464646;
       > em {
         display: block;
-        flex-basis: calc(50% + 6px);
+        width: 50%;
         font: normal 600 32px "Pretendard-SemiBold";
         line-height: 120%;
         padding: 45px 0px 49px 40px;
       }
-      .snsIco {
+      .SNSs {
         display: flex;
-        flex-basis: 10%;
-        align-items: center;
-        justify-content: center;
-        border-left: 1px solid #464646;
-        img {
-          width: 72px;
-          height: 72px;
+        width: 50%;
+        .snsIco {
+          display: flex;
+          width: 20%;
+          align-items: center;
+          justify-content: center;
+          border-left: 1px solid #464646;
+          img {
+            width: 72px;
+            height: 72px;
+          }
         }
       }
     }
@@ -158,18 +167,19 @@
       border-bottom: 1px solid #464646;
       > em {
         display: block;
-        flex-basis: 50%;
+        width: 50%;
         font: normal 600 32px "Pretendard-SemiBold";
         line-height: 120%;
-        margin-left: 40px;
+        padding-left: 40px;
         padding-top: 40px;
       }
       .rightcontainer {
         display: flex;
         flex-wrap: wrap;
-        flex-basis: 50%;
+        width: 50%;
         .cell {
-          flex-basis: calc(50% - 2px);
+          position: relative;
+          width: calc(50% - 2px);
           min-height: 346px;
           border-width: 0px 0px 1px 1px;
           border-style: solid;
@@ -180,7 +190,8 @@
             margin-left: 24px;
           }
           .rightArw {
-            float: right;
+            position: absolute;
+            right: 0px;
             width: 24px;
             height: 24px;
             margin-right: 20px;
@@ -193,7 +204,14 @@
             color: #a7a7a7;
             line-height: 150%;
           }
+          &:nth-of-type(3) {
+            border-bottom: 0px;
+          }
           &:nth-of-type(4) {
+            border-bottom: 0px;
+            .rightArw {
+              display: none;
+            }
             > p {
               &::after {
                 display: block;
@@ -208,6 +226,109 @@
                 content: "COMING SOON";
                 text-align: center;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .moreabout {
+    color: #fff;
+    .title {
+      border-bottom: 1px solid #464646;
+      > em {
+        display: block;
+        max-width: 320px;
+        padding: 29px 20px;
+        line-height: 120%;
+        font: normal 500 32px "Pretendard-Medium";
+      }
+    }
+    .communications {
+      border-bottom: 1px solid #464646;
+      > em {
+        display: block;
+        font: normal 600 24px "Pretendard-SemiBold";
+        line-height: 120%;
+        padding: 28px 20px;
+      }
+      .SNSs {
+        border-top: 1px solid #464646;
+        display: flex;
+        .snsIco {
+          display: flex;
+          width: 20%;
+          height: 72px;
+          align-items: center;
+          justify-content: center;
+          border-left: 1px solid #464646;
+          img {
+            width: 40px;
+            height: 40px;
+          }
+          &:nth-of-type(1) {
+            border-left: 0px;
+          }
+        }
+      }
+    }
+    .ecosystem {
+      justify-content: space-between;
+      border-bottom: 1px solid #464646;
+      > em {
+        display: block;
+        font: normal 600 24px "Pretendard-SemiBold";
+        line-height: 120%;
+        padding: 24px 20px;
+        border-bottom: 1px solid #464646;
+      }
+      .rightcontainer {
+        flex-wrap: wrap;
+        .cell {
+          position: relative;
+          border-bottom: 1px solid #464646;
+          padding: 32px 20px;
+          .name {
+            height: 16px;
+          }
+          .rightArw {
+            position: absolute;
+            right: 0px;
+            width: 16px;
+            height: 16px;
+            margin-right: 20px;
+          }
+          p {
+            display: block;
+            margin-top: 16px;
+            font: normal 500 14px "Pretendard-Medium";
+            color: #a7a7a7;
+            line-height: 150%;
+          }
+          &:nth-of-type(4) {
+            border-bottom: 0px;
+            a {
+              display: flex;
+              gap: 8px;
+              align-items: center;
+              &::after {
+                display: block;
+                width: 82px;
+                height: 19px;
+                border: 1px solid #b64242;
+                border-radius: 100px;
+                font: normal 400 10px "Pretendard-Medium";
+                line-height: 19px;
+                color: #b64242;
+                content: "COMING SOON";
+                text-align: center;
+              }
+            }
+            .rightArw {
+              display: none;
             }
           }
         }
