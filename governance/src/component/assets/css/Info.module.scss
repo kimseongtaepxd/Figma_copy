@@ -59,6 +59,7 @@
           font: normal 600 20px "Pretendard-SemiBold";
           line-height: 120%;
         }
+        .hide,
         .content {
           width: 774px;
           height: 81px;
@@ -192,8 +193,8 @@
         img {
           display: none;
         }
+        .hide,
         .content {
-          display: block;
           font: normal 500 16px "Pretendard-Medium";
           line-height: 150%;
           &:nth-of-type(1) {
@@ -317,7 +318,6 @@
           margin-bottom: 21px;
         }
         .content {
-          display: block;
           font: normal 500 16px "Pretendard-Medium";
           line-height: 150%;
           margin-top: 19px;

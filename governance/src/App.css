@@ -187,6 +187,10 @@ body {
   justify-content: space-between;
 }
 
+main > div {
+  margin: 0 auto;
+}
+
 /* font */
 @font-face {
   font-family: "Pretendard-Light";

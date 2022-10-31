@@ -31,7 +31,7 @@ const Roles = () => {
 
   return (
     <div className={styles.roles}>
-      <div className={styles.title}>Roles of NCPs</div>
+      <h2 className={styles.title}>Roles of NCPs</h2>
       <div className={styles.contents}>
         {Role.map((role) => (
           <div key={role.id} className={styles.cell}>

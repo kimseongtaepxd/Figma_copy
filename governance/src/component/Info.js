@@ -6,22 +6,22 @@ import { useState } from "react";
 const Info = () => {
   const [Allocations, setAllocations] = useState([
     {
-      id: "idontknow",
+      id: "Allocation_1",
       content: "PMR",
       percent: "40%",
     },
     {
-      id: "idontknow",
+      id: "Allocation_2",
       content: "Staking",
       percent: "10%",
     },
     {
-      id: "idontknow",
+      id: "Allocation_3",
       content: "Ecosystem",
       percent: "25%",
     },
     {
-      id: "idontknow",
+      id: "Allocation_4",
       content: "Maintenance",
       percent: "25%",
     },
@@ -56,13 +56,13 @@ const Info = () => {
     },
   ]);
 
-  const Contents = (Contents) => {
+  const Contents = (Con, Open) => {
     const result = [];
-    for (let i = 0; i < Contents.length; i++) {
+    for (let i = 0; i < Con.length; i++) {
       result.push(
-        <li key={Contents[i]} className={styles.content}>
-          {Contents[i]}
-        </li>
+        <p key={"content_" + i} className={Open ? styles.content : styles.hide}>
+          {Con[i]}
+        </p>
       );
     }
     return result;
@@ -84,25 +84,23 @@ const Info = () => {
         </p>
       </div>
       <ul className={styles.description}>
-        {Infos.map((Infos) => (
-          <li key={Infos.id} className={styles.cell}>
-            <em>{Infos.title}</em>
-            <div className={styles.number}>{Infos.number}</div>
+        {Infos.map((Info) => (
+          <li key={Info.id} className={styles.cell}>
+            <em>{Info.title}</em>
+            <div className={styles.number}>{Info.number}</div>
             <img
-              onClick={() => togglist(Infos.id)}
-              src={Infos.isOrder ? down : up}
+              onClick={() => togglist(Info.id)}
+              src={Info.isOrder ? down : up}
               alt="더보기"
             />
-            <p className={Infos.isOrder ? styles.content : styles.hide}>
-              {Contents(Infos.content)}
-            </p>
+            {Contents(Info.content, Info.isOrder)}
           </li>
         ))}
         <li className={styles.cell}>
           <em>Allocation of rewards</em>
           <div className={styles.flexbox}>
             {Allocations.map((all) => (
-              <div className={styles.flexcontent}>
+              <div key={all.id} className={styles.flexcontent}>
                 <span>{all.content}</span>
                 <b>{all.percent}</b>
               </div>

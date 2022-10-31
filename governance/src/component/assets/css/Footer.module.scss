@@ -73,7 +73,9 @@
         margin-top: 20px;
         margin-left: 40px;
         gap: 24px;
-
+        a {
+          color: #464646;
+        }
         .earth {
           display: block;
           width: 24px;
@@ -233,11 +235,17 @@
         margin-top: 20px;
         gap: 24px;
         margin-left: 40px;
+        a {
+          color: #464646;
+        }
         .earth {
           display: block;
           width: 24px;
           height: 24px;
           cursor: pointer;
+        }
+        .hide {
+          display: none;
         }
         .language {
           position: absolute;
@@ -368,6 +376,9 @@
         margin-top: 16px;
         gap: 16px;
         order: 2;
+        a {
+          color: #464646;
+        }
         .earth {
           display: block;
           width: 24px;

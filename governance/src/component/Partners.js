@@ -33,7 +33,7 @@ const Partners = () => {
   return (
     <div className={styles.partners}>
       <div className={styles.leftContainer}>
-        <em>Our Partners</em>
+        <h2>Our Partners</h2>
         <p>
           World leaders in various fields and industries, collaborating with
           WEMIX3.0 to bring about change to your on-chain experience.

@@ -51,9 +51,15 @@ const Footer = () => {
       </ul>
       <div className={styles.container}>
         <ul className={styles.menu}>
-          <li>Terms of Service</li>
-          <li>Privacy Policy</li>
-          <li>Contact</li>
+          <li>
+            <a href="#Terms_of_Service">Terms of Service</a>
+          </li>
+          <li>
+            <a href="#Privacy_Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#Contact">Contact</a>
+          </li>
           <li>
             <img
               src={earth}
@@ -63,7 +69,7 @@ const Footer = () => {
             />
             <ul className={isOpen ? styles.language : styles.hide}>
               {language.map((lan) => (
-                <li>
+                <li key={lan.id}>
                   <input
                     key={lan.language + "_input"}
                     type="radio"

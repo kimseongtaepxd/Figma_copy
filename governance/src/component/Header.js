@@ -40,7 +40,7 @@ const Header = () => {
       />
       <ul className={isOpen ? styles.language : styles.hide}>
         {language.map((lan) => (
-          <li>
+          <li key={lan.id}>
             <input
               key={lan.language + "_input"}
               type="radio"

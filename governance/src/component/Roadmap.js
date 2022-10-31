@@ -64,7 +64,7 @@ const Roadmap = () => {
   return (
     <div className={styles.Roadmap}>
       <div className={styles.top}>
-        <b>Raodmap of WEMIX3.0</b>
+        <h2>Raodmap of WEMIX3.0</h2>
         <em>Decentralized technology, Democratized governance</em>
         <p>
           WEMIX3.0 mainnet, developed on a decentralized architecture, will

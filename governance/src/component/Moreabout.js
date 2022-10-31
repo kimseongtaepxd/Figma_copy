@@ -70,10 +70,10 @@ const Moreabout = () => {
   return (
     <div className={styles.moreabout}>
       <div className={styles.title}>
-        <em>More about WEMIX3.0</em>
+        <h2>More about WEMIX3.0</h2>
       </div>
       <div className={styles.communications}>
-        <em>Communications</em>
+        <h3>Communications</h3>
         <div className={styles.SNSs}>
           {snss.map((SNS) => (
             <li key={SNS.id} className={styles.snsIco}>
@@ -85,7 +85,7 @@ const Moreabout = () => {
         </div>
       </div>
       <div className={styles.ecosystem}>
-        <em>WEMIX Mega-ecosystem</em>
+        <h3>WEMIX Mega-ecosystem</h3>
         <ul className={styles.rightcontainer}>
           {ecosystems.map((eco) => (
             <li key={eco.id} className={styles.cell}>
