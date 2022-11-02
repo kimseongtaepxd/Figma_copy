@@ -1,0 +1,239 @@
+@import "./_mixin";
+
+@include desktop {
+  .roles {
+    min-height: 665px;
+    color: #fff;
+    .title {
+      min-height: 192px;
+      font: normal 500 72px "Pretendard-Medium";
+      text-align: center;
+      line-height: 192px;
+    }
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 474px;
+      .cell {
+        display: flex;
+        width: calc(50% - 2px);
+        min-height: 236px;
+        border-width: 1px 0px 0px 1px;
+        border-style: solid;
+        border-color: #464646;
+        &:nth-of-type(1) {
+          .cellImg {
+            background-image: url(../img/img_integrity&security.png);
+          }
+          .celltext {
+            &::after {
+              display: block;
+              margin-top: 6px;
+              color: #a7a7a7;
+              font: normal 500 14px "Pretendard-Medium";
+              content: "¹ Optional";
+            }
+          }
+        }
+        .cellImg {
+          width: calc(18.75% - 1px);
+          border-right: 1px solid #464646;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 200px;
+        }
+        &:nth-of-type(2) {
+          .cellImg {
+            background-image: url(../img/img_consensus.png);
+          }
+        }
+        &:nth-of-type(3) {
+          height: 234px;
+          .cellImg {
+            height: 234px;
+            background-image: url(../img/img_governance.png);
+          }
+        }
+        &:nth-of-type(4) {
+          height: 234px;
+          .cellImg {
+            height: 234px;
+            background-image: url(../img/img_validation.png);
+          }
+        }
+
+        .celltext {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          width:calc(81.25% - 1px);
+          padding:32px 42px 32px 32px;
+          vertical-align: middle;
+          em {
+            display: block;
+            height: 22px;
+            font: normal 600 18px "Prentendard-SemiBold";
+            line-height: 120%;
+            margin-bottom: 6px;
+          }
+          p {
+            font: normal 500 18px "Pretendard-Medium";
+            line-height: 150%;
+            color: #d1d1d1;
+            align-self: stretch;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .roles {
+    color: #fff;
+    .title {
+      font: normal 500 40px "Pretendard-Medium";
+      text-align: center;
+      line-height: 136px;
+    }
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      .cell {
+        display: flex;
+        min-height: 320px;
+        flex-basis: calc(50% - 2px);
+        border-width: 1px 0px 0px 1px;
+        border-style: solid;
+        border-color: #464646;
+        &:nth-of-type(1) {
+          .cellImg {
+            background-image: url(../img/img_integrity&security.png);
+          }
+          .celltext {
+            &::after {
+              display: block;
+              margin-top: 6px;
+              color: #a7a7a7;
+              font: normal 500 16px "Pretendard-Medium";
+              content: "¹ Optional";
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          .cellImg {
+            background-image: url(../img/img_consensus.png);
+          }
+        }
+        &:nth-of-type(3) {
+          .cellImg {
+            background-image: url(../img/img_governance.png);
+          }
+        }
+        &:nth-of-type(4) {
+          .cellImg {
+            background-image: url(../img/img_validation.png);
+          }
+        }
+        .cellImg {
+          flex-basis: 47%;
+          border-right: 1px solid #464646;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 200px;
+        }
+        .celltext {
+          flex-basis: 57%;
+          margin: auto 28px;
+          em {
+            display: block;
+            height: 22px;
+            font: normal 600 18px "Prentendard-SemiBold";
+            line-height: 120%;
+            margin-bottom: 6px;
+          }
+          p {
+            font: normal 500 16px "Pretendard-Medium";
+            line-height: 150%;
+            color: #d1d1d1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .roles {
+    color: #fff;
+    .title {
+      font: normal 500 32px "Pretendard-Medium";
+      text-align: left;
+      margin-left: 20px;
+      line-height: 80px;
+    }
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      .cell {
+        display: flex;
+        min-height: 320px;
+        border-width: 1px 0px 0px 1px;
+        border-style: solid;
+        border-color: #464646;
+        &:nth-of-type(1) {
+          .cellImg {
+            background-image: url(../img/img_integrity&security.png);
+          }
+          .celltext {
+            &::after {
+              display: block;
+              margin-top: 6px;
+              color: #a7a7a7;
+              font: normal 500 14px "Pretendard-Medium";
+              content: "¹ Optional";
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          .cellImg {
+            background-image: url(../img/img_consensus.png);
+          }
+        }
+        &:nth-of-type(3) {
+          .cellImg {
+            background-image: url(../img/img_governance.png);
+          }
+        }
+        &:nth-of-type(4) {
+          .cellImg {
+            background-image: url(../img/img_validation.png);
+          }
+        }
+        .cellImg {
+          flex-basis: 40.5%;
+          border-right: 1px solid #464646;
+          background-repeat: no-repeat;
+          background-position: right -15px center;
+          background-size: 227px;
+        }
+        .celltext {
+          flex-basis: 59.5%;
+          margin: auto 16px;
+          em {
+            display: block;
+            height: 22px;
+            font: normal 600 16px "Prentendard-SemiBold";
+            line-height: 120%;
+            margin-bottom: 6px;
+          }
+          p {
+            font: normal 500 14px "Pretendard-Medium";
+            line-height: 150%;
+            color: #d1d1d1;
+          }
+        }
+      }
+    }
+  }
+}

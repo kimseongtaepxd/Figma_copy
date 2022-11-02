@@ -1,5 +1,5 @@
-import arw from "./assets/img/ico_arrow.png";
-import styles from "./assets/css/Top.module.scss";
+import arw from "../assets/img/ico_arrow.png";
+import styles from "../assets/css/Top.module.scss";
 
 const Top = () => {
   return (
@@ -17,8 +17,8 @@ const Top = () => {
             new layer 1mainnet.
           </p>
         </div>
-        <a href="#sroll" className={styles.scroll}>
-          <img src={arw} alt="아래화살표" />
+        <a href="#footer" className={styles.scroll}>
+          <img src={arw} alt="아래로 스크롤" />
           SCROLL
         </a>
       </div>

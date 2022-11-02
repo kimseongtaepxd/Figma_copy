@@ -1,4 +1,4 @@
-import styles from "./assets/css/Roles.module.scss";
+import styles from "../assets/css/Roles.module.scss";
 import { useState } from "react";
 
 const Roles = () => {

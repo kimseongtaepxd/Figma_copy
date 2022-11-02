@@ -1,5 +1,5 @@
-import styles from "./assets/css/Partners.module.scss";
-import link from "./assets/img/ico_link.png";
+import styles from "../assets/css/Partners.module.scss";
+import link from "../assets/img/ico_link.png";
 import { useState } from "react";
 
 const Partners = () => {
@@ -44,9 +44,9 @@ const Partners = () => {
           <div key={partner.id} className={styles.cell}>
             <div className={styles.logoImg}></div>
             <div className={styles.textBox}>
-              <a href="#Circle">
+              <a href="#Circle" target="_blank" title={partner.name}>
                 {partner.name}
-                <img src={link} alt="링크아이콘"></img>
+                <img src={link} alt="사이트 링크"></img>
               </a>
               <p>{partner.content}</p>
             </div>

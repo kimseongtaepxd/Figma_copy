@@ -1,0 +1,235 @@
+@import "./_mixin";
+
+@include desktop {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:12px 20px;
+    .logoBox {
+      a{
+        display: flex;
+        gap:8px;
+        align-items: center;
+        .logo {
+          width: 36px;
+          height: 36px;
+        }
+        .writing {
+          width: 156px;
+          height: 20px;
+        }
+      }
+
+    }
+    button {
+      vertical-align: middle;
+      .earth {
+        display: block;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+    }
+    .hide {
+      display: none;
+    }
+    .language {
+      position: absolute;
+      background-color: #2e2e2e;
+      right: 14px;
+      top: 54px;
+      z-index: 1;
+      li {
+        width: 169px;
+        height: 27px;
+        padding: 12px 16px;
+        cursor: pointer;
+        label {
+          display: flex;
+          font: normal 500 18px "Pretendard";
+          color: #fff;
+          line-height: 150%;
+          text-align: left;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+        }
+        input:checked ~ label {
+          &::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            content: "";
+            background-image: url(../img/ico_checked.png);
+            background-size: 24px;
+          }
+        }
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        width: 14px;
+        height: 5px;
+        left: 159px;
+        top: -5px;
+        content: "";
+        background-image: url(../img/notch2.png);
+        background-size: 14px 5px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:12px 20px;
+    .logoBox {
+      a{
+        display: flex;
+        gap:8px;
+        align-items: center;
+        .logo {
+          width: 36px;
+          height: 36px;
+        }
+      .writing {
+        width: 156px;
+        height: 20px;
+      }
+    }
+  }
+    button {
+      vertical-align: middle;
+      .earth {
+        display: block;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+    }
+    .hide {
+      display: none;
+    }
+    .language {
+      position: absolute;
+      background-color: #2e2e2e;
+      right: 14px;
+      top: 54px;
+      z-index: 1;
+      li {
+        width: 169px;
+        height: 24px;
+        padding: 10px 16px;
+        label {
+          display: flex;
+          font: normal 500 16px "Pretendard";
+          color: #fff;
+          line-height: 150%;
+          text-align: left;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+        }
+        input:checked ~ label {
+          &::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            content: "";
+            background-image: url(../img/ico_checked.png);
+            background-size: 24px;
+          }
+        }
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        width: 14px;
+        height: 5px;
+        left: 159px;
+        top: -5px;
+        content: "";
+        background-image: url(../img/notch2.png);
+        background-size: 14px 5px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:12px 20px;
+    .logoBox {
+      .logo {
+        width: 36px;
+        height: 36px;
+      }
+      .writing {
+        display: none;
+      }
+    }
+    button {
+      vertical-align: middle;
+      .earth {
+        display: block;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+    }
+    .hide {
+      display: none;
+    }
+    .language {
+      position: absolute;
+      background-color: #2e2e2e;
+      right: 14px;
+      top: 54px;
+      z-index: 1;
+      li {
+        width: 169px;
+        height: 24px;
+        padding: 11px 16px;
+        label {
+          display: flex;
+          height: 21px;
+          font: normal 500 14px "Pretendard";
+          color: #fff;
+          line-height: 150%;
+          text-align: left;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+        }
+        input:checked ~ label {
+          &::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            content: "";
+            background-image: url(../img/ico_checked.png);
+            background-size: 24px;
+          }
+        }
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        width: 14px;
+        height: 5px;
+        left: 159px;
+        top: -5px;
+        content: "";
+        background-image: url(../img/notch2.png);
+        background-size: 14px 5px;
+      }
+    }
+  }
+}

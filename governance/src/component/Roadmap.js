@@ -1,6 +1,6 @@
-import styles from "./assets/css/Roadmap.module.scss";
-import down from "./assets/img/arw_down.png";
-import up from "./assets/img/arw_up.png";
+import styles from "../assets/css/Roadmap.module.scss";
+import down from "../assets/img/arw_down.png";
+import up from "../assets/img/arw_up.png";
 import { useState } from "react";
 
 const Roadmap = () => {
@@ -85,11 +85,12 @@ const Roadmap = () => {
             <li className={styles.title}>
               <em>{phase.name}</em>
               <div>
+                <button type="button" onClick={() => togglist(phase.id)}>
                 <img
-                  onClick={() => togglist(phase.id)}
                   src={phase.isOrder ? down : up}
                   alt="더보기"
                 />
+                </button>
               </div>
             </li>
             {Contents(phase.content)}

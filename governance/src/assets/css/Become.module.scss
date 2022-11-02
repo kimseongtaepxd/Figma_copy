@@ -1,0 +1,106 @@
+@import "./_mixin";
+
+.become {
+  background-color: #8db1e8;
+  color: #1a1a1a;
+  .container {
+    margin: 0px auto;
+    text-align: center;
+    em {
+      display: block;
+    }
+    button {
+      display: flex;
+      justify-content: space-between;
+      width: 238px;
+      height: 48px;
+      margin: 0px auto;
+      background-color: #1a1a1a;
+      background-image: url(../img/arw_right.png);
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-position: 198px 12px;
+      color: #fff;
+      text-align: left;
+      strong {
+        width: 146px;
+        height: 24px;
+        padding:12px 16px;
+        font: normal 600 16px "Pretendard-SemiBold";
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+
+@include desktop {
+  .become {
+    min-height: 412px;
+    .container {
+      padding: 94px 112px;
+      em {
+        margin: 0px auto;
+        font: normal 600 56px "Pretendard-SemiBold";
+        line-height: 120%;
+      }
+      p {
+        max-width:913px;
+        margin: 8px auto;
+        font: normal 500 18px "Pretendard-Medium";
+        line-height: 150%;
+      }
+      button {
+        margin-top: 32px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .become {
+    .container {
+      padding-top: 63px;
+      padding-bottom: 67px;
+      em {
+        max-width: 691px;
+        margin: 0px auto;
+        font: normal 600 32px "Pretendard-SemiBold";
+        line-height: 120%;
+      }
+      p {
+        max-width: 800px;
+        margin: 0px auto;
+        margin-top: 8px;
+        font: normal 500 16px "Pretendard-Medium";
+        line-height: 150%;
+      }
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .become {
+    .container {
+      padding-top: 33.5px;
+      padding-bottom: 45.5px;
+      em {
+        margin: 0px 41px;
+        font: normal 600 24px "Pretendard-SemiBold";
+        line-height: 140%;
+      }
+      p {
+        margin: 0px 40px;
+        margin-top: 4px;
+        font: normal 500 14px "Pretendard-Medium";
+        line-height: 150%;
+      }
+      button {
+        margin-top: 16px;
+      }
+    }
+  }
+}

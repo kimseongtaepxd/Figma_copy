@@ -1,4 +1,4 @@
-import styles from "./assets/css/Become.module.scss";
+import styles from "../assets/css/Become.module.scss";
 
 const Become = () => {
   return (
@@ -11,7 +11,7 @@ const Become = () => {
           1 mega-ecosystem. Contribute to the growth of WEMIX3.0
         </p>
         <button>
-          <b>Become a WONDER</b>
+          <strong>Become a WONDER</strong>
         </button>
       </div>
     </div>

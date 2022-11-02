@@ -1,8 +1,8 @@
 import { useState } from "react";
-import logo from "./assets/img/logo_wemixGovernance.png";
-import writing from "./assets/img/logo_type_governance.png";
-import earth from "./assets/img/GNB_Right Menu.png";
-import styles from "./assets/css/Header.module.scss";
+import logo from "../assets/img/logo_wemixGovernance.png";
+import writing from "../assets/img/logo_type_governance.png";
+import earth from "../assets/img/GNB_Right Menu.png";
+import styles from "../assets/css/Header.module.scss";
 
 import React from "react";
 
@@ -25,19 +25,22 @@ const Header = () => {
   return (
     <header>
       <h1 className={styles.logoBox}>
-        <img className={styles.logo} src={logo} alt="governance logo" />
+        <a href="#governance">
+        <img className={styles.logo} src={logo} alt="governance" />
         <img
           className={styles.writing}
           src={writing}
-          alt="governance writing"
+          alt="governance"
         />
+        </a>
       </h1>
-      <img
+      <button type="button" onClick={() => toggleearth()}>
+        <img
         src={earth}
-        onClick={() => toggleearth()}
-        alt="language"
+        alt="언어선택"
         className={styles.earth}
-      />
+        />
+      </button>
       <ul className={isOpen ? styles.language : styles.hide}>
         {language.map((lan) => (
           <li key={lan.id}>

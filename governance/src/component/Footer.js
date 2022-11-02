@@ -1,13 +1,13 @@
-import styles from "./assets/css/Footer.module.scss";
+import styles from "../assets/css/Footer.module.scss";
 import { useState } from "react";
-import logo from "./assets/img/img_footer_governance.png";
-import earth from "./assets/img/ico_earth.png";
-import SNS from "./assets/img/ico_sns.png";
-import telegram from "./assets/img/ico_telegram.png";
-import twitter from "./assets/img/ico_twitter.png";
-import youtube from "./assets/img/ico_youtube.png";
-import facebook from "./assets/img/ico_facebook.png";
-import down from "./assets/img/arw_down.png";
+import logo from "../assets/img/img_footer_governance.png";
+import earth from "../assets/img/ico_earth.png";
+import medium from "../assets/img/ico_medium.png";
+import telegram from "../assets/img/ico_telegram.png";
+import twitter from "../assets/img/ico_twitter.png";
+import youtube from "../assets/img/ico_youtube.png";
+import facebook from "../assets/img/ico_facebook.png";
+import down from "../assets/img/arw_down.png";
 
 const Footer = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -25,8 +25,76 @@ const Footer = () => {
     { id: "language_2", language: "korean", content: "한국어" },
   ]);
 
+  const [snss, setsnss] = useState([
+    {
+      id: "Medium",
+      ico: medium,
+      href: "#Medium",
+    },
+    {
+      id: "telegram",
+      ico: telegram,
+      href: "#telegram",
+    },
+    {
+      id: "twitter",
+      ico: twitter,
+      href: "#twitter",
+    },
+    {
+      id: "youtube",
+      ico: youtube,
+      href: "#youtube",
+    },
+    {
+      id: "facebook",
+      ico: facebook,
+      href: "#facebook",
+    },
+  ]);
+
+  const [menus, setmenus] = useState([
+    {
+      id: "Terms_of_Service",
+      href: "#Terms_of_Service",
+      content: "Terms of Service",
+    },
+    {
+      id: "Privacy_Policy",
+      href: "#Privacy_Policy",
+      content: "Privacy Policy",
+    },
+    {
+      id: "Contact",
+      href: "#Contact",
+      content: "Contact",
+    },
+  ]);
+
+    const [sites, setsites] = useState([
+      {
+        id: "WEMIX",
+        href:"#WEMIX",
+        name: "WEMIX",
+      },
+      {
+        id: "WEMIXPLAY",
+        href: "#WEMIX_PLAY",
+        name: "WEMIX PLAY",
+      },
+      {
+        id: "NILE",
+        href: "#NILE",
+        name: "NILE",
+      },
+      {
+        id: "WEMIX.Fi",
+        name: "WEMIX.Fi",
+      },
+    ]);
+
   return (
-    <footer>
+    <footer id="footer">
       <h1>
         <a href="#governance">
           <img src={logo} alt="governance" />
@@ -38,35 +106,28 @@ const Footer = () => {
       </div>
       <div className={styles.title}>Family Sites</div>
       <ul className={styles.sites}>
-        <li>
-          <a href="#WEMIX">WEMIX</a>
-        </li>
-        <li>
-          <a href="#WEMIX_PLAY">WEMIX PLAY</a>
-        </li>
-        <li>
-          <a href="#NILE">NILE</a>
-        </li>
-        <li>WEMIX.Fi</li>
+      {sites.map((site) => (
+            <li key={site.id + "_footer"}>
+            {site.href ? <a href={site.href} target="_blank" title={site.id} rel="noreferrer">{site.name}</a> : <>{site.name}</> }
+            {site.href ? <></> : <div className={styles.comingsoon}>COMING SOON</div>}
+          </li>
+          ))}
       </ul>
       <div className={styles.container}>
         <ul className={styles.menu}>
-          <li>
-            <a href="#Terms_of_Service">Terms of Service</a>
+          {menus.map((menu) => (
+            <li key={menu.id + "_footer"}>
+            <a href={menu.href} target="_blank" title={menu.id} rel="noreferrer">{menu.content}</a>
           </li>
+          ))}
           <li>
-            <a href="#Privacy_Policy">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#Contact">Contact</a>
-          </li>
-          <li>
+            <button type="button" onClick={() => toggleearth()}>
             <img
               src={earth}
-              onClick={() => toggleearth()}
-              alt="language"
+              alt="언어선택"
               className={styles.earth}
             />
+            </button>
             <ul className={isOpen ? styles.language : styles.hide}>
               {language.map((lan) => (
                 <li key={lan.id}>
@@ -90,31 +151,13 @@ const Footer = () => {
           </li>
         </ul>
         <ul className={styles.sns}>
-          <li>
-            <a href="#SNS">
-              <img src={SNS} alt="SNS" />
-            </a>
-          </li>
-          <li>
-            <a href="#telegram">
-              <img src={telegram} alt="telegram" />
-            </a>
-          </li>
-          <li>
-            <a href="#twitter">
-              <img src={twitter} alt="twitter" />
-            </a>
-          </li>
-          <li>
-            <a href="#youtube">
-              <img src={youtube} alt="youtube" />
-            </a>
-          </li>
-          <li>
-            <a href="#facebook">
-              <img src={facebook} alt="facebook" />
-            </a>
-          </li>
+        {snss.map((SNS) => (
+            <li key={SNS.id + "_footer"}>
+              <a href={SNS.href} target="_blank" title={SNS.id} rel="noreferrer">
+                <img src={SNS.ico} alt={SNS.id} />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 

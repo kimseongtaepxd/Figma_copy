@@ -1,6 +1,6 @@
-import styles from "./assets/css/Info.module.scss";
-import down from "./assets/img/arw_down.png";
-import up from "./assets/img/arw_up.png";
+import styles from "../assets/css/Info.module.scss";
+import down from "../assets/img/arw_down.png";
+import up from "../assets/img/arw_up.png";
 import { useState } from "react";
 
 const Info = () => {
@@ -50,7 +50,7 @@ const Info = () => {
       title: "Guaranteed APR",
       number: "21.024%",
       content: [
-        "The PMR<sub>Permanent Minting Reward</sub> is distributed automatically as 40% to NCP (each WONDER node receives 1%*), 10% to stakers, 25% for ecosystem and 25% towards the maintenance of the mainnet and the ecosystem.",
+        "The PMR Permanent Minting Reward is distributed automatically as 40% to NCP (each WONDER node receives 1%*), 10% to stakers, 25% for ecosystem and 25% towards the maintenance of the mainnet and the ecosystem.",
         "*1% per node is equivalent to apporoximately 21.024% APR per node.",
       ],
     },
@@ -88,11 +88,13 @@ const Info = () => {
           <li key={Info.id} className={styles.cell}>
             <em>{Info.title}</em>
             <div className={styles.number}>{Info.number}</div>
+            <button onClick={() => togglist(Info.id)}>
             <img
-              onClick={() => togglist(Info.id)}
               src={Info.isOrder ? down : up}
               alt="더보기"
             />
+            </button>
+            
             {Contents(Info.content, Info.isOrder)}
           </li>
         ))}
@@ -102,7 +104,7 @@ const Info = () => {
             {Allocations.map((all) => (
               <div key={all.id} className={styles.flexcontent}>
                 <span>{all.content}</span>
-                <b>{all.percent}</b>
+                <strong>{all.percent}</strong>
               </div>
             ))}
           </div>
