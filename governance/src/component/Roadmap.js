@@ -96,7 +96,7 @@ const Roadmap = () => {
                 </button>
               </div>
             </li>
-            {Contents(phase.content)}
+            <ul>{Contents(phase.content)}</ul>
           </ul>
         ))}
       </ul>

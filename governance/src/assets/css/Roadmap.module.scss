@@ -61,11 +61,15 @@
         button {
           display: none;
         }
-        .content {
-          width: 100%;
-          font: normal 500 18px "Pretendard-Medium";
-          line-height: 150%;
-          margin-bottom: 27px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 27px;
+          .content {
+            width: 100%;
+            font: normal 500 18px "Pretendard-Medium";
+            line-height: 150%;
+          }
         }
       }
     }
@@ -132,10 +136,15 @@
           line-height: 140%;
           margin-bottom: 24px;
         }
-        .content {
-          font: normal 500 18px "Pretendard-Medium";
-          line-height: 150%;
-          margin-bottom: 27px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          .content {
+            width: 100%;
+            font: normal 500 16px "Pretendard-Medium";
+            line-height: 150%;
+          }
         }
       }
     }
@@ -205,10 +214,14 @@
           font: normal 600 24px "Pretendard-SemiBold";
           line-height: 140%;
         }
-        .content {
-          font: normal 500 14px "Pretendard-Medium";
-          line-height: 150%;
-          margin-bottom: 21px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 21px;
+          .content {
+            font: normal 500 14px "Pretendard-Medium";
+            line-height: 150%;
+          }
         }
       }
       .hide {
