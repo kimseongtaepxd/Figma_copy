@@ -17,7 +17,7 @@
     }
     .communications {
       display: flex;
-      justify-content:space-between;
+      justify-content: space-between;
       min-height: 274px;
       border-bottom: 1px solid #464646;
       > h2,
@@ -51,20 +51,20 @@
       > h2,
       > h3 {
         display: block;
-        width:calc(50% - 80px);
+        width: calc(50% - 80px);
         font: normal 600 56px "Pretendard-SemiBold";
         line-height: 120%;
-        padding:40px;
+        padding: 40px;
       }
       .rightcontainer {
         display: flex;
         flex-wrap: wrap;
-        width:50%;
+        width: 50%;
         .cell {
           position: relative;
           width: calc(50% - 122px);
           min-height: 410px;
-          padding:60px;
+          padding: 60px;
           border-width: 0px 0px 1px 1px;
           border-style: solid;
           border-color: #464646;
@@ -72,7 +72,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
           }
           .name {
             height: 1.45vw;
@@ -90,12 +89,12 @@
           }
           .comingsoon {
             display: block;
-            position:absolute;
+            position: absolute;
             width: 113px;
             height: 19px;
-            left:60px;
-            padding:4px 8px;
-            bottom:60px;
+            left: 60px;
+            padding: 4px 8px;
+            bottom: 60px;
             border: 1px solid #b64242;
             border-radius: 100px;
             font: normal 500 14px "Pretendard-Medium";
@@ -166,7 +165,7 @@
         width: calc(50% - 80px);
         font: normal 600 32px "Pretendard-SemiBold";
         line-height: 120%;
-        padding:40px;
+        padding: 40px;
       }
       .rightcontainer {
         display: flex;
@@ -184,7 +183,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
           }
           .name {
             max-width: calc(100% - 72px);
@@ -195,7 +193,7 @@
           }
           p {
             display: block;
-            margin-top:24px;
+            margin-top: 24px;
             font: normal 500 14px "Pretendard-Medium";
             color: #a7a7a7;
             line-height: 150%;
@@ -205,9 +203,9 @@
             width: 97px;
             height: 22px;
             padding: 2px 6px;
-            margin-top:31px;
-            left:24px;
-            bottom:24px;
+            margin-top: 31px;
+            left: 24px;
+            bottom: 24px;
             border: 1px solid #b64242;
             border-radius: 100px;
             font: normal 500 12px "Pretendard-Medium";
@@ -291,7 +289,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
           }
           .name {
             height: 16px;
@@ -309,12 +306,12 @@
           }
           .comingsoon {
             display: block;
-            position:absolute;
+            position: absolute;
             width: 80px;
             height: 16px;
             padding: 2px 6px;
-            left:117px;
-            top:32px;
+            left: 117px;
+            top: 32px;
             border: 1px solid #b64242;
             border-radius: 100px;
             font: normal 400 10px "Pretendard-Medium";

@@ -71,27 +71,27 @@ const Footer = () => {
     },
   ]);
 
-    const [sites, setsites] = useState([
-      {
-        id: "WEMIX",
-        href:"#WEMIX",
-        name: "WEMIX",
-      },
-      {
-        id: "WEMIXPLAY",
-        href: "#WEMIX_PLAY",
-        name: "WEMIX PLAY",
-      },
-      {
-        id: "NILE",
-        href: "#NILE",
-        name: "NILE",
-      },
-      {
-        id: "WEMIX.Fi",
-        name: "WEMIX.Fi",
-      },
-    ]);
+  const [sites, setsites] = useState([
+    {
+      id: "WEMIX",
+      href: "#WEMIX",
+      name: "WEMIX",
+    },
+    {
+      id: "WEMIXPLAY",
+      href: "#WEMIX_PLAY",
+      name: "WEMIX PLAY",
+    },
+    {
+      id: "NILE",
+      href: "#NILE",
+      name: "NILE",
+    },
+    {
+      id: "WEMIX.Fi",
+      name: "WEMIX.Fi",
+    },
+  ]);
 
   return (
     <footer id="footer">
@@ -102,31 +102,51 @@ const Footer = () => {
       </h1>
       <div className={styles.familySites}>
         Family Sites
-        <img src={down} alt="더보기"></img>
+        <button>
+          <img src={down} alt="더보기"></img>
+        </button>
       </div>
       <div className={styles.title}>Family Sites</div>
       <ul className={styles.sites}>
-      {sites.map((site) => (
-            <li key={site.id + "_footer"}>
-            {site.href ? <a href={site.href} target="_blank" title={site.id} rel="noreferrer">{site.name}</a> : <>{site.name}</> }
-            {site.href ? <></> : <div className={styles.comingsoon}>COMING SOON</div>}
+        {sites.map((site) => (
+          <li key={site.id + "_footer"}>
+            {site.href ? (
+              <a
+                href={site.href}
+                target="_blank"
+                title={site.id}
+                rel="noreferrer"
+              >
+                {site.name}
+              </a>
+            ) : (
+              <>{site.name}</>
+            )}
+            {site.href ? (
+              <></>
+            ) : (
+              <div className={styles.comingsoon}>COMING SOON</div>
+            )}
           </li>
-          ))}
+        ))}
       </ul>
       <div className={styles.container}>
         <ul className={styles.menu}>
           {menus.map((menu) => (
             <li key={menu.id + "_footer"}>
-            <a href={menu.href} target="_blank" title={menu.id} rel="noreferrer">{menu.content}</a>
-          </li>
+              <a
+                href={menu.href}
+                target="_blank"
+                title={menu.id}
+                rel="noreferrer"
+              >
+                {menu.content}
+              </a>
+            </li>
           ))}
           <li>
             <button type="button" onClick={() => toggleearth()}>
-            <img
-              src={earth}
-              alt="언어선택"
-              className={styles.earth}
-            />
+              <img src={earth} alt="언어선택" className={styles.earth} />
             </button>
             <ul className={isOpen ? styles.language : styles.hide}>
               {language.map((lan) => (
@@ -151,9 +171,14 @@ const Footer = () => {
           </li>
         </ul>
         <ul className={styles.sns}>
-        {snss.map((SNS) => (
+          {snss.map((SNS) => (
             <li key={SNS.id + "_footer"}>
-              <a href={SNS.href} target="_blank" title={SNS.id} rel="noreferrer">
+              <a
+                href={SNS.href}
+                target="_blank"
+                title={SNS.id}
+                rel="noreferrer"
+              >
                 <img src={SNS.ico} alt={SNS.id} />
               </a>
             </li>

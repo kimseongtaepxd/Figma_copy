@@ -23,7 +23,7 @@
       color: #fff;
       text-align: left;
       strong {
-        padding:12px 16px;
+        padding: 12px 16px;
         font: normal 600 16px "Pretendard-SemiBold";
         line-height: 150%;
       }
@@ -31,19 +31,18 @@
   }
 }
 
-
 @include desktop {
   .become {
     min-height: 412px;
     .container {
-      padding: 94px 112px;
+      padding: 94px 112px 109px;
       em {
         margin: 0px auto;
         font: normal 600 56px "Pretendard-SemiBold";
         line-height: 120%;
       }
       p {
-        max-width:913px;
+        max-width: 913px;
         margin: 8px auto;
         font: normal 500 18px "Pretendard-Medium";
         line-height: 150%;

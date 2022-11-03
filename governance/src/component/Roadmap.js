@@ -22,6 +22,7 @@ const Roadmap = () => {
         "Each NCP must stake 1.5M WEMIX, and the PMR (Permanent Minting Reward) is distributed automatically to NCP (40%), Stakers (10%), Eco fund (25%) and Maintenance (25%).",
         "WEMIX Grand Staking will become available to the community which will yield the 10% Staking Reward allocated through the PMR. However, staking participants for the WEMIX Grand Staking may not withdrawal from the staking pool prior to the implementation of Phase 2.",
       ],
+      current: true,
     },
     {
       id: "Phase_02",
@@ -84,12 +85,14 @@ const Roadmap = () => {
           >
             <li className={styles.title}>
               <em>{phase.name}</em>
+              {phase.current ? (
+                <div className={styles.current}>CURRENT</div>
+              ) : (
+                <></>
+              )}
               <div>
                 <button type="button" onClick={() => togglist(phase.id)}>
-                <img
-                  src={phase.isOrder ? down : up}
-                  alt="더보기"
-                />
+                  <img src={phase.isOrder ? down : up} alt="더보기" />
                 </button>
               </div>
             </li>

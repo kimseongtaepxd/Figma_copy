@@ -26,20 +26,12 @@ const Header = () => {
     <header>
       <h1 className={styles.logoBox}>
         <a href="#governance">
-        <img className={styles.logo} src={logo} alt="governance" />
-        <img
-          className={styles.writing}
-          src={writing}
-          alt="governance"
-        />
+          <img className={styles.logo} src={logo} alt="governance" />
+          <img className={styles.writing} src={writing} alt="governance" />
         </a>
       </h1>
       <button type="button" onClick={() => toggleearth()}>
-        <img
-        src={earth}
-        alt="언어선택"
-        className={styles.earth}
-        />
+        <img src={earth} alt="언어선택" className={styles.earth} />
       </button>
       <ul className={isOpen ? styles.language : styles.hide}>
         {language.map((lan) => (

@@ -80,7 +80,12 @@ const Moreabout = () => {
         <div className={styles.SNSs}>
           {snss.map((SNS) => (
             <li key={SNS.id} className={styles.snsIco}>
-              <a href={SNS.href + "_MoreAbout"} target="_blank" title="SNS.id" rel="noreferrer">
+              <a
+                href={SNS.href + "_MoreAbout"}
+                target="_blank"
+                title="SNS.id"
+                rel="noreferrer"
+              >
                 <img src={SNS.ico} alt={SNS.id} />
               </a>
             </li>
@@ -92,19 +97,32 @@ const Moreabout = () => {
         <ul className={styles.rightcontainer}>
           {ecosystems.map((eco) => (
             <li key={eco.id + "_MoreAbout"} className={styles.cell}>
+              {eco.href ? (
+                <a
+                  href={eco.href}
+                  target="_blank"
+                  title={eco.id}
+                  rel="noreferrer"
+                >
+                  <img className={styles.name} src={eco.name} alt={eco.id} />
+                  <img
+                    className={styles.rightArw}
+                    src={rightArw}
+                    alt="더보기"
+                  />
+                </a>
+              ) : (
+                <>
+                  <img className={styles.name} src={eco.name} alt={eco.id} />
+                </>
+              )}
 
-              {eco.href ? <a href={eco.href} target="_blank" title={eco.id} rel="noreferrer">
-                <img className={styles.name} src={eco.name} alt={eco.id} />
-                <img
-                  className={styles.rightArw}
-                  src={rightArw}
-                  alt="더보기"
-                />
-              </a> : <><img className={styles.name} src={eco.name} alt={eco.id} /></>}
-              
               <p>{eco.content}</p>
-              {eco.href ? <></> : <div className={styles.comingsoon}>COMMING SOON</div>}
-
+              {eco.href ? (
+                <></>
+              ) : (
+                <div className={styles.comingsoon}>COMMING SOON</div>
+              )}
             </li>
           ))}
         </ul>

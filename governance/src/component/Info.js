@@ -1,6 +1,7 @@
 import styles from "../assets/css/Info.module.scss";
 import down from "../assets/img/arw_down.png";
 import up from "../assets/img/arw_up.png";
+import Staking from "../assets/img/ico_staking.png";
 import { useState } from "react";
 
 const Info = () => {
@@ -9,6 +10,7 @@ const Info = () => {
       id: "Allocation_1",
       content: "PMR",
       percent: "40%",
+      tooltip: "tooltip",
     },
     {
       id: "Allocation_2",
@@ -43,6 +45,7 @@ const Info = () => {
       content: [
         "Each NCP is required to stake 1,500,000 WEMIX to their allocatedvalidator node. As official council members and representatives of the community, NCPs are then given full authority overacess to mainnet parameters through governance.",
       ],
+      ico: Staking,
     },
     {
       id: "Info_02",
@@ -87,14 +90,18 @@ const Info = () => {
         {Infos.map((Info) => (
           <li key={Info.id} className={styles.cell}>
             <em>{Info.title}</em>
-            <div className={styles.number}>{Info.number}</div>
-            <button onClick={() => togglist(Info.id)}>
-            <img
-              src={Info.isOrder ? down : up}
-              alt="더보기"
-            />
+            {Info.ico ? (
+              <div className={`${styles.Staking} ${styles.number}`}>
+                {Info.number}
+              </div>
+            ) : (
+              <div className={styles.number}>{Info.number}</div>
+            )}
+
+            <button type="button" onClick={() => togglist(Info.id)}>
+              <img src={Info.isOrder ? down : up} alt="더보기" />
             </button>
-            
+
             {Contents(Info.content, Info.isOrder)}
           </li>
         ))}
@@ -103,7 +110,11 @@ const Info = () => {
           <div className={styles.flexbox}>
             {Allocations.map((all) => (
               <div key={all.id} className={styles.flexcontent}>
-                <span>{all.content}</span>
+                {all.tooltip ? (
+                  <span className={styles.tooltip}>{all.content}</span>
+                ) : (
+                  <span>{all.content}</span>
+                )}
                 <strong>{all.percent}</strong>
               </div>
             ))}

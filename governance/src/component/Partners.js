@@ -46,7 +46,7 @@ const Partners = () => {
             <div className={styles.textBox}>
               <a href="#Circle" target="_blank" title={partner.name}>
                 {partner.name}
-                <img src={link} alt="사이트 링크"></img>
+                <img src={link} alt="해당사이트로 이동"></img>
               </a>
               <p>{partner.content}</p>
             </div>

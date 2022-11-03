@@ -2,22 +2,22 @@
 
 @include desktop {
   .partners {
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     min-height: 960px;
     color: #fff;
     .leftContainer {
-      flex:1;
+      flex: 1;
       min-height: 121px;
-      padding:40px;
+      padding: 40px;
       > h2 {
         display: block;
         font: normal 500 72px "Pretendard-Medium";
         line-height: 120%;
       }
       > p {
-        max-width:1034px;
+        max-width: 1034px;
         margin-top: 8px;
         font: normal 500 18px "Pretendart-Medium";
         letter-spacing: -0.119px;
@@ -25,7 +25,7 @@
       }
     }
     .rightContainer {
-      flex:1;
+      flex: 1;
       .cell {
         display: flex;
         border-width: 0px 0px 1px 1px;
@@ -42,8 +42,8 @@
         }
         .textBox {
           margin: auto;
-          padding:40px;
-          width:80%;
+          padding: 40px;
+          width: 80%;
           > a {
             display: block;
             height: 24px;
@@ -213,7 +213,7 @@
           flex-basis: 40%;
           width: 72px;
           height: 72px;
-          margin-bottom:20px;
+          margin-bottom: 20px;
           background-position: center;
           background-repeat: no-repeat;
           background-size: 72px;

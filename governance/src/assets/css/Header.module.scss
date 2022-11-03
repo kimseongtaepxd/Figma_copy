@@ -5,11 +5,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:12px 20px;
+    padding: 12px 20px;
     .logoBox {
-      a{
+      a {
         display: flex;
-        gap:8px;
+        gap: 8px;
         align-items: center;
         .logo {
           width: 36px;
@@ -20,7 +20,6 @@
           height: 20px;
         }
       }
-
     }
     button {
       vertical-align: middle;
@@ -86,22 +85,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:12px 20px;
+    padding: 12px 20px;
     .logoBox {
-      a{
+      a {
         display: flex;
-        gap:8px;
+        gap: 8px;
         align-items: center;
         .logo {
           width: 36px;
           height: 36px;
         }
-      .writing {
-        width: 156px;
-        height: 20px;
+        .writing {
+          width: 156px;
+          height: 20px;
+        }
       }
     }
-  }
     button {
       vertical-align: middle;
       .earth {
@@ -165,7 +164,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:12px 20px;
+    padding: 12px 20px;
     .logoBox {
       .logo {
         width: 36px;
