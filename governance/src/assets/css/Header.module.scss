@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    text-indent: -99999px;
+    font-size:0px;
     .logoBox {
       a {
         display: flex;
@@ -15,10 +15,12 @@
         .logo {
           width: 36px;
           height: 36px;
+          align-items: center;
         }
         .writing {
           width: 156px;
           height: 20px;
+          align-items: center;
         }
       }
     }
@@ -87,6 +89,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
+    font-size:0px;
     .logoBox {
       a {
         display: flex;
@@ -166,7 +169,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
+    font-size:0px;
     .logoBox {
+      a {
+        display: flex;
+        align-items: center;
+      }
       .logo {
         width: 36px;
         height: 36px;

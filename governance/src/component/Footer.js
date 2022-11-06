@@ -106,7 +106,7 @@ const Footer = () => {
           <img src={down} alt="더보기"></img>
         </button>
       </div>
-      <div className={styles.title}>Family Sites</div>
+
       <ul className={styles.sites}>
         {sites.map((site) => (
           <li key={site.id + "_footer"}>
@@ -122,11 +122,9 @@ const Footer = () => {
             ) : (
               <>{site.name}</>
             )}
-            {site.href ? (
-              <></>
-            ) : (
+            {!site.href && 
               <div className={styles.comingsoon}>COMING SOON</div>
-            )}
+            }
           </li>
         ))}
       </ul>

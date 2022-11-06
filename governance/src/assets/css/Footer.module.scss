@@ -9,7 +9,12 @@
     line-height: 150%;
     padding: 48px 40px 127px;
     .familySites {
-      display: none;
+      width: 66px;
+      height: 18px;
+      padding-top: 32px;
+      button {
+        display: none;
+      }
     }
     > h1 {
       height: 36px;
@@ -17,11 +22,6 @@
         width: 200px;
         height: 36px;
       }
-    }
-    .title {
-      width: 66px;
-      height: 18px;
-      padding-top: 32px;
     }
     .sites {
       display: flex;
@@ -154,9 +154,6 @@
     font: normal 500 12px "Pretendard-Medium";
     line-height: 150%;
     padding: 48px 40px 127px;
-    .familySites {
-      display: none;
-    }
     > h1 {
       height: 36px;
       > a > img {
@@ -165,10 +162,13 @@
         vertical-align: middle;
       }
     }
-    .title {
+    .familySites {
       width: 66px;
       height: 18px;
       padding-top: 32px;
+      button {
+        display: none;
+      }
     }
     .sites {
       display: flex;

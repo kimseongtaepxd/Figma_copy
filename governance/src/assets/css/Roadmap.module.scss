@@ -210,14 +210,11 @@
           font: normal 600 24px "Pretendard-SemiBold";
           line-height: 140%;
         }
-        ul {
-          display: flex;
-          flex-direction: column;
-          gap: 21px;
-          .content {
-            font: normal 500 14px "Pretendard-Medium";
-            line-height: 150%;
-          }
+        .content {
+          width: 100%;
+          font: normal 500 16px "Pretendard-Medium";
+          line-height: 150%;
+          margin-bottom: 27px;
         }
       }
       .hide {
