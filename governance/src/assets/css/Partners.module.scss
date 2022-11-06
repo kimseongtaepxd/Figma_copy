@@ -38,7 +38,7 @@
           border-right: 1px solid #464646;
           background-position: center;
           background-repeat: no-repeat;
-          background-size: 132px;
+          background-size: calc(100% - 20px);
         }
         .textBox {
           margin: auto;
@@ -109,7 +109,7 @@
         &::before {
           display: block;
           margin-bottom: 8px;
-          font: normal 500 40px "Pretendard-Medium";
+          font: normal 500 calc(24px + 0.6vw) "Pretendard-Medium";
           line-height: 120%;
           content: "Meet the WONDERS";
         }

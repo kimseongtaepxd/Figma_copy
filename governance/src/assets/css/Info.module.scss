@@ -7,11 +7,11 @@
     .wonders {
       text-align: center;
       padding: 108px 82px;
-      em {
+      h2 {
         display: block;
         max-width: 1672px;
         margin: 0px auto;
-        font: normal 600 44px "Pretendard-SemiBold";
+        font: normal 600 2.35vw "Pretendard-SemiBold";
         line-height: 140%;
       }
       p {
@@ -46,7 +46,7 @@
         }
         .number {
           margin-top: 16px;
-          font: normal 500 88px "Pretendard-Medium";
+          font: normal 500 3.4vw "Pretendard-Medium";
           display: flex;
           margin-bottom: 12px;
           align-items: center;
@@ -56,12 +56,12 @@
         .Staking:before {
           content: "";
           background-image: url(../img/ico_staking.png);
-          background-size: 72px;
+          background-size: 2.8vw;
           background-repeat: no-repeat;
           background-position: center;
           margin-right: 8px;
-          width: 72px;
-          height: 72px;
+          width: 2.8vw;
+          height: 2.8vw;
           display: inline-block;
         }
         img {
@@ -85,7 +85,7 @@
             }
             strong {
               width: 100%;
-              font: normal 600 56px "Prentendard-SemiBold";
+              font: normal 600 3.4vw "Prentendard-SemiBold";
               line-height: 120%;
             }
             .tooltip {
@@ -127,7 +127,7 @@
     .wonders {
       text-align: center;
       padding: 74px 82px 72px;
-      em {
+      h2 {
         display: block;
         max-width: 859px;
         font: normal 600 24px "Pretendard-SemiBold";
@@ -151,7 +151,7 @@
         border-right: 1px solid #4f4372;
         em {
           display: block;
-          font: normal 600 18px "Pretendard-SemiBold";
+          font: normal 600 calc(16px + 0.08vw) "Pretendard-SemiBold";
           line-height: 120%;
         }
         img {
@@ -171,7 +171,7 @@
 
         .number {
           margin-top: 16px;
-          font: normal 500 48px "Pretendard-Medium";
+          font: normal 500 calc(32px + 0.6vw) "Pretendard-Medium";
           display: flex;
           margin-bottom: 12px;
           align-items: center;
@@ -181,11 +181,11 @@
         .Staking:before {
           content: "";
           background-image: url(../img/ico_staking.png);
-          background-size: 40px;
+          background-size: calc(24px + 0.6vw);
           background-repeat: no-repeat;
           background-position: center;
-          width: 40px;
-          height: 40px;
+          width: calc(24px + 0.6vw);
+          height: calc(24px + 0.6vw);
           display: inline-block;
         }
         .flexbox {
@@ -244,7 +244,7 @@
     .wonders {
       text-align: left;
       padding: 40px 20px;
-      em {
+      h2 {
         display: block;
         font: normal 600 24px "Pretendard-SemiBold";
         line-height: 140%;

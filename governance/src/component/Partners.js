@@ -1,34 +1,37 @@
 import styles from "../assets/css/Partners.module.scss";
 import link from "../assets/img/ico_link.png";
-import { useState } from "react";
 
 const Partners = () => {
-  const [Partner, setPartner] = useState([
+  const Partner = [
     {
       id: "partner_1",
       name: "Circle",
       content:
         "Circle leads the global financial technology through digital currency innovation and creation of financial infrastructure. It also provides growth opportunities for businesses and investors by linking existing financial systems and global leading public chains.",
+      title: "Circle로 이동"
     },
     {
       id: "Partner_2",
       name: "Blockdaemon",
       content:
         "Blockdaemon, founded in New York in 2017, provides top-tier infrastructure building tools for blockchain companies. Blockdaemon's servies help blockchain companies to swifly deploy and manage blocks.",
-    },
+      title: "Circle로 이동"
+      },
     {
       id: "Partner_3",
       name: "Multichain",
       content:
         "As an open-source blockchain platform, Multichain provides a world-class solution that enables users to freely transact across chains, pushing the boundaries of blockchain.",
+      title: "Multichain로 이동"  
     },
     {
       id: "Partner_4",
       name: "DSRV Labs",
       content:
         "DSRV Labs is a blockchain validator that provides service to enable clients to participate safely and easily in the Proof of Stake network through block validation and network monitoring",
+      title: "DSRV Labs로 이동"
     },
-  ]);
+  ];
 
   return (
     <div className={styles.partners}>
@@ -39,20 +42,20 @@ const Partners = () => {
           WEMIX3.0 to bring about change to your on-chain experience.
         </p>
       </div>
-      <div className={styles.rightContainer}>
+      <ul className={styles.rightContainer}>
         {Partner.map((partner) => (
-          <div key={partner.id} className={styles.cell}>
+          <li key={partner.id} className={styles.cell}>
             <div className={styles.logoImg}></div>
             <div className={styles.textBox}>
-              <a href="#Circle" target="_blank" title={partner.name}>
+              <a href="#Circle" target="_blank" title={partner.title}>
                 {partner.name}
-                <img src={link} alt="해당사이트로 이동"></img>
+                <img src={link}></img>
               </a>
               <p>{partner.content}</p>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

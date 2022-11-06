@@ -5,25 +5,21 @@
     min-height: 1472px;
     color: #fff;
     .title {
-      height: 216px;
       border-bottom: 1px solid #464646;
-      > h2,
-      > h3 {
+      > h2 {
         display: block;
         padding: 65px 40px;
         line-height: 120%;
-        font: normal 500 72px "Pretendard-Medium";
+        font: normal 500 calc(36px + 1.4vw) "Pretendard-Medium";
       }
     }
     .communications {
       display: flex;
       justify-content: space-between;
-      min-height: 274px;
       border-bottom: 1px solid #464646;
-      > h2,
       > h3 {
         display: block;
-        font: normal 600 56px "Pretendard-SemiBold";
+        font: normal 600 calc(32px + 0.5vw) "Pretendard-SemiBold";
         line-height: 120%;
         padding: 104px 40px;
       }
@@ -37,8 +33,8 @@
           justify-content: center;
           border-left: 1px solid #464646;
           img {
-            width: 135px;
-            height: 135px;
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -48,11 +44,10 @@
       justify-content: space-between;
       min-height: 982px;
       border-bottom: 1px solid #464646;
-      > h2,
       > h3 {
         display: block;
         width: calc(50% - 80px);
-        font: normal 600 56px "Pretendard-SemiBold";
+        font: normal 600 calc(31px + 0.5vw) "Pretendard-SemiBold";
         line-height: 120%;
         padding: 40px;
       }
@@ -64,7 +59,7 @@
           position: relative;
           width: calc(50% - 122px);
           min-height: 410px;
-          padding: 60px;
+          padding: 60px 60px 100px 60px;
           border-width: 0px 0px 1px 1px;
           border-style: solid;
           border-color: #464646;
@@ -119,22 +114,20 @@
     color: #fff;
     .title {
       border-bottom: 1px solid #464646;
-      > h2,
-      > h3 {
+      > h2{
         display: block;
         padding: 46px 40px;
         line-height: 120%;
-        font: normal 500 40px "Pretendard-Medium";
+        font: normal 500 calc(32px + 0.3vw) "Pretendard-Medium";
       }
     }
     .communications {
       display: flex;
       border-bottom: 1px solid #464646;
-      > h2,
       > h3 {
         display: block;
         width: calc(50% - 90px);
-        font: normal 600 32px "Pretendard-SemiBold";
+        font: normal 600 calc(24px + 0.3vw) "Pretendard-SemiBold";
         line-height: 120%;
         padding: 45px;
         margin-bottom: 4px;
@@ -159,11 +152,11 @@
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid #464646;
-      > h2,
+
       > h3 {
         display: block;
         width: calc(50% - 80px);
-        font: normal 600 32px "Pretendard-SemiBold";
+        font: normal 600 calc(22px + 0.3vw) "Pretendard-SemiBold";
         line-height: 120%;
         padding: 40px;
       }
@@ -185,11 +178,11 @@
             align-items: center;
           }
           .name {
-            max-width: calc(100% - 72px);
+            height: 1.45vw;
           }
           .rightArw {
-            width: 24px;
-            height: 24px;
+            width: 1.45vw;
+            height: 1.45vw;
           }
           p {
             display: block;
@@ -230,8 +223,7 @@
     color: #fff;
     .title {
       border-bottom: 1px solid #464646;
-      > h2,
-      > h3 {
+      > h2 {
         display: block;
         max-width: 320px;
         padding: 29px 20px;
@@ -241,7 +233,6 @@
     }
     .communications {
       border-bottom: 1px solid #464646;
-      > h2,
       > h3 {
         display: block;
         font: normal 600 24px "Pretendard-SemiBold";
@@ -271,7 +262,6 @@
     .ecosystem {
       justify-content: space-between;
       border-bottom: 1px solid #464646;
-      > h2,
       > h3 {
         display: block;
         font: normal 600 24px "Pretendard-SemiBold";

@@ -1,8 +1,7 @@
 import styles from "../assets/css/Roles.module.scss";
-import { useState } from "react";
 
 const Roles = () => {
-  const [Role, setRole] = useState([
+  const Role = [
     {
       id: "role_1",
       name: "Integrity & Security",
@@ -27,14 +26,14 @@ const Roles = () => {
       content:
         "The nodes of selected NCPs receive newly created blocks or transactions on the chain, authorize and validate new blocks and transfer the verified data to other NCP nodes.",
     },
-  ]);
+  ];
 
   return (
     <div className={styles.roles}>
       <h2 className={styles.title}>Roles of NCPs</h2>
-      <div className={styles.contents}>
+      <ul className={styles.contents}>
         {Role.map((role) => (
-          <div key={role.id} className={styles.cell}>
+          <li key={role.id} className={styles.cell}>
             <div className={styles.cellImg}></div>
             <div className={styles.celltext}>
               <div>
@@ -42,9 +41,9 @@ const Roles = () => {
                 <p>{role.content}</p>
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

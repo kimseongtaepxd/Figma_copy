@@ -1,5 +1,31 @@
 @import "./_mixin";
 
+.cell {
+  .cellImg {
+    background-size:100%;
+  }
+  &:nth-of-type(1) {
+    .cellImg {
+      background-image: url(../img/img_integrity&security.png);
+    }
+  }
+  &:nth-of-type(2) {
+    .cellImg {
+      background-image: url(../img/img_consensus.png);
+    }
+  }
+  &:nth-of-type(3) {
+    .cellImg {
+      background-image: url(../img/img_governance.png);
+    }
+  }
+  &:nth-of-type(4) {
+    .cellImg {
+      background-image: url(../img/img_validation.png);
+    }
+  }
+}
+  
 @include desktop {
   .roles {
     min-height: 665px;
@@ -21,10 +47,13 @@
         border-width: 1px 0px 0px 1px;
         border-style: solid;
         border-color: #464646;
+        .cellImg {
+          width: calc(18.75% - 1px);
+          border-right: 1px solid #464646;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
         &:nth-of-type(1) {
-          .cellImg {
-            background-image: url(../img/img_integrity&security.png);
-          }
           .celltext {
             &::after {
               display: block;
@@ -35,33 +64,6 @@
             }
           }
         }
-        .cellImg {
-          width: calc(18.75% - 1px);
-          border-right: 1px solid #464646;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 200px;
-        }
-        &:nth-of-type(2) {
-          .cellImg {
-            background-image: url(../img/img_consensus.png);
-          }
-        }
-        &:nth-of-type(3) {
-          height: 234px;
-          .cellImg {
-            height: 234px;
-            background-image: url(../img/img_governance.png);
-          }
-        }
-        &:nth-of-type(4) {
-          height: 234px;
-          .cellImg {
-            height: 234px;
-            background-image: url(../img/img_validation.png);
-          }
-        }
-
         .celltext {
           display: flex;
           flex-wrap: wrap;
@@ -107,9 +109,6 @@
         border-style: solid;
         border-color: #464646;
         &:nth-of-type(1) {
-          .cellImg {
-            background-image: url(../img/img_integrity&security.png);
-          }
           .celltext {
             &::after {
               display: block;
@@ -120,27 +119,12 @@
             }
           }
         }
-        &:nth-of-type(2) {
-          .cellImg {
-            background-image: url(../img/img_consensus.png);
-          }
-        }
-        &:nth-of-type(3) {
-          .cellImg {
-            background-image: url(../img/img_governance.png);
-          }
-        }
-        &:nth-of-type(4) {
-          .cellImg {
-            background-image: url(../img/img_validation.png);
-          }
-        }
         .cellImg {
           flex-basis: 47%;
           border-right: 1px solid #464646;
           background-repeat: no-repeat;
           background-position: center;
-          background-size: 200px;
+          background-size: 100%;
         }
         .celltext {
           flex-basis: 57%;

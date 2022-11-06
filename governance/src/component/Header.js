@@ -3,7 +3,6 @@ import logo from "../assets/img/logo_wemixGovernance.png";
 import writing from "../assets/img/logo_type_governance.png";
 import earth from "../assets/img/GNB_Right Menu.png";
 import styles from "../assets/css/Header.module.scss";
-
 import React from "react";
 
 const Header = () => {
@@ -13,18 +12,19 @@ const Header = () => {
     setisOpen((isOpen) => !isOpen);
   };
 
-  const [language, setlanguage] = useState([
+  const language = [
     {
       id: "language2_1",
       language: "english2",
       content: "English",
     },
     { id: "language2_2", language: "korean2", content: "한국어" },
-  ]);
+  ];
 
   return (
     <header>
       <h1 className={styles.logoBox}>
+      Governance
         <a href="#governance">
           <img className={styles.logo} src={logo} alt="governance" />
           <img className={styles.writing} src={writing} alt="governance" />

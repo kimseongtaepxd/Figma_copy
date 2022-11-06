@@ -16,16 +16,16 @@ const Footer = () => {
     setisOpen((isOpen) => !isOpen);
   };
 
-  const [language, setlanguage] = useState([
+  const language = [
     {
       id: "language_1",
       language: "english",
       content: "English",
     },
     { id: "language_2", language: "korean", content: "한국어" },
-  ]);
+  ];
 
-  const [snss, setsnss] = useState([
+  const snss = [
     {
       id: "Medium",
       ico: medium,
@@ -51,9 +51,9 @@ const Footer = () => {
       ico: facebook,
       href: "#facebook",
     },
-  ]);
+  ];
 
-  const [menus, setmenus] = useState([
+  const menus = [
     {
       id: "Terms_of_Service",
       href: "#Terms_of_Service",
@@ -69,9 +69,9 @@ const Footer = () => {
       href: "#Contact",
       content: "Contact",
     },
-  ]);
+  ];
 
-  const [sites, setsites] = useState([
+  const sites = [
     {
       id: "WEMIX",
       href: "#WEMIX",
@@ -91,7 +91,7 @@ const Footer = () => {
       id: "WEMIX.Fi",
       name: "WEMIX.Fi",
     },
-  ]);
+  ];
 
   return (
     <footer id="footer">

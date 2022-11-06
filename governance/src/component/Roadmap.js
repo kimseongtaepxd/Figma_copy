@@ -54,9 +54,9 @@ const Roadmap = () => {
     const result = [];
     for (let i = 0; i < Contents.length; i++) {
       result.push(
-        <li key={Contents[i]} className={styles.content}>
+        <p key={Contents[i]} className={styles.content}>
           {Contents[i]}
-        </li>
+        </p>
       );
     }
     return result;
@@ -77,29 +77,27 @@ const Roadmap = () => {
           contribution to the ecosystem.
         </p>
       </div>
-      <ul className={styles.description}>
+      <ol className={styles.description}>
         {Phase.map((phase) => (
-          <ul
+          <li
             key={phase.id}
             className={phase.isOrder ? styles.cell : styles.hide}
           >
-            <li className={styles.title}>
+            <div className={styles.title}>
               <em>{phase.name}</em>
-              {phase.current ? (
+              {phase.current && (
                 <div className={styles.current}>CURRENT</div>
-              ) : (
-                <></>
               )}
               <div>
                 <button type="button" onClick={() => togglist(phase.id)}>
                   <img src={phase.isOrder ? down : up} alt="더보기" />
                 </button>
               </div>
-            </li>
-            <ul>{Contents(phase.content)}</ul>
-          </ul>
+            </div>
+            {Contents(phase.content)}
+          </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 };

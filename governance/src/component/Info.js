@@ -5,7 +5,7 @@ import Staking from "../assets/img/ico_staking.png";
 import { useState } from "react";
 
 const Info = () => {
-  const [Allocations, setAllocations] = useState([
+  const Allocations = [
     {
       id: "Allocation_1",
       content: "PMR",
@@ -27,7 +27,7 @@ const Info = () => {
       content: "Maintenance",
       percent: "25%",
     },
-  ]);
+  ];
 
   const togglist = (id) => {
     let findIndex = Infos.findIndex((item) => item.id === id);
@@ -74,11 +74,11 @@ const Info = () => {
   return (
     <div className={styles.info}>
       <div className={styles.wonders}>
-        <em>
+        <h2>
           WONDERS<sup>1</sup>,also known as NCPs<sup>2</sup>, are the authority
           members chosen to represent the interests of the WEMIX community as a
           whole via governance.
-        </em>
+        </h2>
         <p>
           <sup>1</sup>WONDER : WEMIX On-chain Network of Decentralized ecosystem
           Regulators
@@ -107,18 +107,18 @@ const Info = () => {
         ))}
         <li className={styles.cell}>
           <em>Allocation of rewards</em>
-          <div className={styles.flexbox}>
+          <ul className={styles.flexbox}>
             {Allocations.map((all) => (
-              <div key={all.id} className={styles.flexcontent}>
+              <li key={all.id} className={styles.flexcontent}>
                 {all.tooltip ? (
                   <span className={styles.tooltip}>{all.content}</span>
                 ) : (
                   <span>{all.content}</span>
                 )}
                 <strong>{all.percent}</strong>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </li>
       </ul>
     </div>

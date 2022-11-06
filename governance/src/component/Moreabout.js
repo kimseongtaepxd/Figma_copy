@@ -9,10 +9,10 @@ import wemixplay from "../assets/img/img_wemixplay.png";
 import nile from "../assets/img/img_nile.png";
 import wemixfi from "../assets/img/img_wemixfi.png";
 import rightArw from "../assets/img/arw_right.png";
-import { useState } from "react";
+
 
 const Moreabout = () => {
-  const [ecosystems, setecosystems] = useState([
+  const ecosystems = [
     {
       id: "WEMIX",
       name: wemix,
@@ -40,9 +40,9 @@ const Moreabout = () => {
       content:
         "A secure on-chain DeFi platform that supports storage exchange, borrowing, settlement and investment of crypto-assets powered by oracies that collect, analyze, and broadcast data propagated form a variety of sources for security and vaildation.",
     },
-  ]);
+  ];
 
-  const [snss, setsnss] = useState([
+  const snss = [
     {
       id: "Medium",
       ico: medium,
@@ -68,7 +68,7 @@ const Moreabout = () => {
       ico: facebook,
       href: "#facebook",
     },
-  ]);
+  ];
 
   return (
     <div className={styles.moreabout}>
@@ -77,7 +77,7 @@ const Moreabout = () => {
       </div>
       <div className={styles.communications}>
         <h3>Communications</h3>
-        <div className={styles.SNSs}>
+        <ul className={styles.SNSs}>
           {snss.map((SNS) => (
             <li key={SNS.id} className={styles.snsIco}>
               <a
@@ -90,7 +90,7 @@ const Moreabout = () => {
               </a>
             </li>
           ))}
-        </div>
+        </ul>
       </div>
       <div className={styles.ecosystem}>
         <h3>WEMIX Mega-ecosystem</h3>
@@ -112,17 +112,13 @@ const Moreabout = () => {
                   />
                 </a>
               ) : (
-                <>
-                  <img className={styles.name} src={eco.name} alt={eco.id} />
-                </>
+                  <><img className={styles.name} src={eco.name} alt={eco.id} /></>
               )}
 
               <p>{eco.content}</p>
-              {eco.href ? (
-                <></>
-              ) : (
+              {!eco.href && 
                 <div className={styles.comingsoon}>COMMING SOON</div>
-              )}
+              }
             </li>
           ))}
         </ul>

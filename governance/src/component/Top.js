@@ -6,10 +6,10 @@ const Top = () => {
     <div className={styles.top}>
       <div className={styles.left}>
         <div className={styles.leftBox}>
-          <em>
+          <h2>
             40 WONDERS : <br />
             The best-in-class global Node Council Partners
-          </em>
+          </h2>
           <p>
             40 Node Council Partners will become the foundation of a new Web3
             life built on WEMIX3.0 by contributing to the development and growth
@@ -17,10 +17,7 @@ const Top = () => {
             new layer 1mainnet.
           </p>
         </div>
-        <a href="#footer" className={styles.scroll}>
-          <img src={arw} alt="아래로 스크롤" />
-          SCROLL
-        </a>
+          <span className={styles.scroll}><img src={arw} alt="스크롤 더 있음" />SCROLL</span>
       </div>
       <div className={styles.right}></div>
     </div>

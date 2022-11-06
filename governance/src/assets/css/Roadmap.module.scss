@@ -16,7 +16,7 @@
       em {
         display: block;
         padding-top: 8px;
-        font: normal 600 56px "Pretendard-SemiBold";
+        font: normal 600 calc(32px + 0.5vw) "Pretendard-SemiBold";
         line-height: 120%;
       }
       p {
@@ -38,38 +38,38 @@
         width: 33.3%;
         padding: 30px 40px;
         border-right: 1px solid #4f4372;
-        em {
-          display: block;
-          height: 62px;
-          font: normal 600 44px "Pretendard-SemiBold";
-          line-height: 140%;
-          margin-bottom: 25px;
-        }
-        .current {
-          position: absolute;
-          left: 236px;
-          top: 46.5px;
-          width: 82px;
-          height: 29px;
-          font: normal 500 14px "Pretendard-Medium";
-          text-align: center;
-          color: #fff;
-          line-height: 29px;
-          background-color: #1a1a1a;
-          border-radius: 16px;
-        }
-        button {
-          display: none;
-        }
-        ul {
+        .title {
           display: flex;
-          flex-direction: column;
-          gap: 27px;
-          .content {
-            width: 100%;
-            font: normal 500 18px "Pretendard-Medium";
-            line-height: 150%;
+          margin-bottom: 25px;
+          align-items: center;
+          gap:8px;
+          em {
+            font: normal 600 calc(24px + 0.8vw) "Pretendard-SemiBold";
+            line-height: 140%;
+            
           }
+          .current {
+            display: inline-block;
+            left: 236px;
+            top: 46.5px;
+            width: 82px;
+            height: 29px;
+            font: normal 500 14px "Pretendard-Medium";
+            text-align: center;
+            color: #fff;
+            line-height: 29px;
+            background-color: #1a1a1a;
+            border-radius: 16px;
+          }
+          button {
+            display: none;
+          }
+        }
+        .content {
+          width: 100%;
+          font: normal 500 18px "Pretendard-Medium";
+          line-height: 150%;
+          margin-bottom: 27px;
         }
       }
     }
@@ -136,15 +136,11 @@
           line-height: 140%;
           margin-bottom: 24px;
         }
-        ul {
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-          .content {
-            width: 100%;
-            font: normal 500 16px "Pretendard-Medium";
-            line-height: 150%;
-          }
+        .content {
+          width: 100%;
+          font: normal 500 16px "Pretendard-Medium";
+          line-height: 150%;
+          margin-bottom: 27px;
         }
       }
     }

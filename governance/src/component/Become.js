@@ -4,7 +4,7 @@ const Become = () => {
   return (
     <div className={styles.become}>
       <div className={styles.container}>
-        <em>Become the next WONDER</em>
+        <h3>Become the next WONDER</h3>
         <p>
           WEMIX is constantly recruiting NCPs to reach the common goal of
           securing and enhancing the community experiences within our new layer
