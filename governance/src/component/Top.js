@@ -17,7 +17,10 @@ const Top = () => {
             new layer 1mainnet.
           </p>
         </div>
-          <span className={styles.scroll}><img src={arw} alt="스크롤 더 있음" />SCROLL</span>
+        <span className={styles.scroll}>
+          <img src={arw} alt="스크롤 더 있음" />
+          SCROLL
+        </span>
       </div>
       <div className={styles.right}></div>
     </div>

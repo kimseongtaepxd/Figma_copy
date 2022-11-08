@@ -43,7 +43,12 @@ const Info = () => {
       title: "Staking Required",
       number: "1.5M",
       content: [
-        "Each NCP is required to stake 1,500,000 WEMIX to their allocatedvalidator node. As official council members and representatives of the community, NCPs are then given full authority overacess to mainnet parameters through governance.",
+        <>
+          Each NCP is required to stake 1,500,000 WEMIX to their
+          allocatedvalidator node. As official council members and
+          representatives of the community, NCPs are then given full authority
+          overacess to mainnet parameters through governance.
+        </>,
       ],
       ico: Staking,
     },
@@ -53,8 +58,13 @@ const Info = () => {
       title: "Guaranteed APR",
       number: "21.024%",
       content: [
-        "The PMR Permanent Minting Reward is distributed automatically as 40% to NCP (each WONDER node receives 1%*), 10% to stakers, 25% for ecosystem and 25% towards the maintenance of the mainnet and the ecosystem.",
-        "*1% per node is equivalent to apporoximately 21.024% APR per node.",
+        <>
+          The PMR <sub>Permanent Minting Reward</sub> is distributed
+          automatically as 40% to NCP (each WONDER node receives 1%*), 10% to
+          stakers, 25% for ecosystem and 25% towards the maintenance of the
+          mainnet and the ecosystem.
+        </>,
+        <>*1% per node is equivalent to apporoximately 21.024% APR per node.</>,
       ],
     },
   ]);

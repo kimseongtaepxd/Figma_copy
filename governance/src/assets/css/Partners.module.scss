@@ -10,7 +10,7 @@
     .leftContainer {
       flex: 1;
       min-height: 121px;
-      padding: 40px;
+      padding: 32px;
       > h2 {
         display: block;
         font: normal 500 72px "Pretendard-Medium";
@@ -38,11 +38,11 @@
           border-right: 1px solid #464646;
           background-position: center;
           background-repeat: no-repeat;
-          background-size: calc(100% - 20px);
+          background-size: 5.2vw;
         }
         .textBox {
           margin: auto;
-          padding: 40px;
+          padding: calc(32px + 0.3vw);
           width: 80%;
           > a {
             display: block;

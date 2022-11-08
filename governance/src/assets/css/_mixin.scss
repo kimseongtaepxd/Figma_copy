@@ -7,7 +7,7 @@
 }
 
 @mixin tablet {
-  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
     @content;
   }
 }
@@ -20,31 +20,30 @@
 
 @font-face {
   font-family: "Pretendard-Light";
-  src: 
-    url("../font/Pretendard-Light.woff") format("woff"),
-    url("../font/Pretendard-Light.ttf") format("truetype"),
+  src: url("../font/Pretendard-Light.woff") format("woff"),
+    url("../font/Pretendard-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Pretendard-Medium";
   src: url("../font/Pretendard-Medium.woff") format("woff"),
-  url("../font/Pretendard-Medium.ttf") format("truetype");
+    url("../font/Pretendard-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Pretendard-Bold";
   src: url("../font/Pretendard-Bold.woff") format("woff"),
-  url("../font/Pretendard-Bold.ttf") format("truetype");
+    url("../font/Pretendard-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Pretendard-SemiBold";
   src: url("../font/Pretendard-SemiBold.woff") format("woff"),
-  url("../font/Pretendard-SemiBold.ttf") format("truetype");
+    url("../font/Pretendard-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Pretendard";
   src: url("../font/Pretendard-Regular.woff") format("woff"),
-  url("../font/Pretendard-Regular.ttf") format("truetype");
+    url("../font/Pretendard-Regular.ttf") format("truetype");
 }

@@ -8,12 +8,19 @@ import twitter from "../assets/img/ico_twitter.png";
 import youtube from "../assets/img/ico_youtube.png";
 import facebook from "../assets/img/ico_facebook.png";
 import down from "../assets/img/arw_down.png";
+import up from "../assets/img/arw_up.png";
 
 const Footer = () => {
   const [isOpen, setisOpen] = useState(false);
 
   const toggleearth = () => {
     setisOpen((isOpen) => !isOpen);
+  };
+
+  const [isOpenSites, setisOpenSites] = useState(false);
+
+  const toggleSites = () => {
+    setisOpenSites((isOpenSites) => !isOpenSites);
   };
 
   const language = [
@@ -102,12 +109,12 @@ const Footer = () => {
       </h1>
       <div className={styles.familySites}>
         Family Sites
-        <button>
-          <img src={down} alt="더보기"></img>
+        <button onClick={() => toggleSites()}>
+          <img src={isOpenSites ? down : up} alt="더보기"></img>
         </button>
       </div>
 
-      <ul className={styles.sites}>
+      <ul className={isOpenSites ? styles.sites : styles.siteshide}>
         {sites.map((site) => (
           <li key={site.id + "_footer"}>
             {site.href ? (
@@ -122,9 +129,7 @@ const Footer = () => {
             ) : (
               <>{site.name}</>
             )}
-            {!site.href && 
-              <div className={styles.comingsoon}>COMING SOON</div>
-            }
+            {!site.href && <div className={styles.comingsoon}>COMING SOON</div>}
           </li>
         ))}
       </ul>

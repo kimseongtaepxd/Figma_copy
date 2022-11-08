@@ -16,7 +16,7 @@
       em {
         display: block;
         padding-top: 8px;
-        font: normal 600 calc(32px + 0.5vw) "Pretendard-SemiBold";
+        font: normal 600 2.2vw "Pretendard-SemiBold";
         line-height: 120%;
       }
       p {
@@ -42,11 +42,10 @@
           display: flex;
           margin-bottom: 25px;
           align-items: center;
-          gap:8px;
+          gap: 8px;
           em {
             font: normal 600 calc(24px + 0.8vw) "Pretendard-SemiBold";
             line-height: 140%;
-            
           }
           .current {
             display: inline-block;
@@ -113,12 +112,12 @@
         padding: 40px 40px 29px 40px;
         border-right: 1px solid #4f4372;
         .current {
-          display: block;
-          position: absolute;
+          display: inline-block;
           width: 73px;
           height: 26px;
           left: 149px;
           top: 44px;
+          margin-left: 8px;
           font: normal 500 12px "Pretendard-Medium";
           text-align: center;
           color: #fff;
@@ -131,8 +130,8 @@
           display: none;
         }
         em {
-          display: block;
-          font: normal 600 24px "Pretendard-SemiBold";
+          display: inline-block;
+          font: normal 600 2.34vw "Pretendard-SemiBold";
           line-height: 140%;
           margin-bottom: 24px;
         }

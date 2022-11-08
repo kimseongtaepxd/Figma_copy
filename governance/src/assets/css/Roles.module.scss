@@ -2,7 +2,7 @@
 
 .cell {
   .cellImg {
-    background-size:100%;
+    background-size: 8vw;
   }
   &:nth-of-type(1) {
     .cellImg {
@@ -25,16 +25,17 @@
     }
   }
 }
-  
+
 @include desktop {
   .roles {
     min-height: 665px;
     color: #fff;
     .title {
-      min-height: 192px;
       font: normal 500 72px "Pretendard-Medium";
       text-align: center;
-      line-height: 192px;
+      line-height: 120%;
+      padding: 53px 20vw;
+      text-align: right;
     }
     .contents {
       display: flex;
@@ -128,7 +129,7 @@
         }
         .celltext {
           flex-basis: 57%;
-          margin: auto 28px;
+          padding: 23px 28px;
           em {
             display: block;
             height: 22px;

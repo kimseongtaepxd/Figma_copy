@@ -1,5 +1,4 @@
 import "./App.css";
-import { useState, useTitle } from "react";
 import Header from "./component/Header.js";
 import Top from "./component/Top.js";
 import Info from "./component/Info.js";

@@ -82,15 +82,13 @@
 @include mobile {
   .become {
     .container {
-      padding-top: 33.5px;
-      padding-bottom: 45.5px;
+      padding: 33.5px 40px 45.5px;
       h3 {
-        margin: 0px 41px;
+        margin: 0px 1px;
         font: normal 600 24px "Pretendard-SemiBold";
         line-height: 140%;
       }
       p {
-        margin: 0px 40px;
         margin-top: 4px;
         font: normal 500 14px "Pretendard-Medium";
         line-height: 150%;

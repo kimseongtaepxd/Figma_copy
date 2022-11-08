@@ -10,7 +10,6 @@ import nile from "../assets/img/img_nile.png";
 import wemixfi from "../assets/img/img_wemixfi.png";
 import rightArw from "../assets/img/arw_right.png";
 
-
 const Moreabout = () => {
   const ecosystems = [
     {
@@ -112,13 +111,13 @@ const Moreabout = () => {
                   />
                 </a>
               ) : (
-                  <><img className={styles.name} src={eco.name} alt={eco.id} /></>
+                <img className={styles.name} src={eco.name} alt={eco.id} />
               )}
 
               <p>{eco.content}</p>
-              {!eco.href && 
+              {!eco.href && (
                 <div className={styles.comingsoon}>COMMING SOON</div>
-              }
+              )}
             </li>
           ))}
         </ul>

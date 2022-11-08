@@ -2,16 +2,15 @@
 
 @include desktop {
   .info {
-    min-height: 836px;
     background-color: #a484ff;
     .wonders {
       text-align: center;
       padding: 108px 82px;
       h2 {
         display: block;
-        max-width: 1672px;
+        max-width: 64vw;
         margin: 0px auto;
-        font: normal 600 2.35vw "Pretendard-SemiBold";
+        font: normal 600 1.72vw "Pretendard-SemiBold";
         line-height: 140%;
       }
       p {
@@ -126,7 +125,7 @@
     background-color: #a484ff;
     .wonders {
       text-align: center;
-      padding: 74px 82px 72px;
+      padding: 74px 81px 72px;
       h2 {
         display: block;
         max-width: 859px;
