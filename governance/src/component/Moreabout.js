@@ -97,19 +97,21 @@ const Moreabout = () => {
           {ecosystems.map((eco) => (
             <li key={eco.id + "_MoreAbout"} className={styles.cell}>
               {eco.href ? (
-                <a
-                  href={eco.href}
-                  target="_blank"
-                  title={eco.id}
-                  rel="noreferrer"
-                >
+                <div className={styles.celltop}>
                   <img className={styles.name} src={eco.name} alt={eco.id} />
-                  <img
-                    className={styles.rightArw}
-                    src={rightArw}
-                    alt="더보기"
-                  />
-                </a>
+                  <a
+                    href={eco.href}
+                    target="_blank"
+                    title={eco.id}
+                    rel="noreferrer"
+                  >
+                    <img
+                      className={styles.rightArw}
+                      src={rightArw}
+                      alt="더보기"
+                    />
+                  </a>
+                </div>
               ) : (
                 <img className={styles.name} src={eco.name} alt={eco.id} />
               )}

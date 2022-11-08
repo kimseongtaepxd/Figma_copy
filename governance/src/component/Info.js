@@ -2,6 +2,7 @@ import styles from "../assets/css/Info.module.scss";
 import down from "../assets/img/arw_down.png";
 import up from "../assets/img/arw_up.png";
 import Staking from "../assets/img/ico_staking.png";
+import tooltip from "../assets/img/ico_circle.png";
 import { useState } from "react";
 
 const Info = () => {
@@ -10,7 +11,7 @@ const Info = () => {
       id: "Allocation_1",
       content: "PMR",
       percent: "40%",
-      tooltip: "tooltip",
+      tooltip: true,
     },
     {
       id: "Allocation_2",
@@ -62,7 +63,7 @@ const Info = () => {
           The PMR <sub>Permanent Minting Reward</sub> is distributed
           automatically as 40% to NCP (each WONDER node receives 1%*), 10% to
           stakers, 25% for ecosystem and 25% towards the maintenance of the
-          mainnet and the ecosystem.
+          mainnet and the ecosystem."
         </>,
         <>*1% per node is equivalent to apporoximately 21.024% APR per node.</>,
       ],
@@ -121,11 +122,18 @@ const Info = () => {
             {Allocations.map((all) => (
               <li key={all.id} className={styles.flexcontent}>
                 {all.tooltip ? (
-                  <span className={styles.tooltip}>{all.content}</span>
+                  <div
+                    className={styles.tooltip}
+                    data-tooltip-text="THIS IS TOOLTIP!!"
+                  >
+                    {all.content}
+                    <img src={tooltip} alt="툴팁" />
+                  </div>
                 ) : (
-                  <span>{all.content}</span>
+                  <div>{all.content}</div>
                 )}
                 <strong>{all.percent}</strong>
+                {all.tooltip && <span>1% per WONDER</span>}
               </li>
             ))}
           </ul>

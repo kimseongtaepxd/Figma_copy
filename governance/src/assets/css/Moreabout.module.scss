@@ -62,16 +62,16 @@
           border-width: 0px 0px 1px 1px;
           border-style: solid;
           border-color: #464646;
-          a {
+          .celltop {
             display: flex;
             justify-content: space-between;
             align-items: center;
           }
           .name {
-            height: calc(-9px + 2.1vw);
+            height: calc(-5px + 1.9133vw);
           }
           .rightArw {
-            width: 6.9%;
+            height: calc(-5px + 1.9133vw);
           }
           p {
             display: block;
@@ -170,17 +170,17 @@
           border-style: solid;
           border-color: #464646;
           padding: 32px 20px 24px 24px;
-          a {
+          .celltop {
             display: flex;
             justify-content: space-between;
             align-items: center;
           }
           .name {
-            height: 1.45vw;
+            height: calc(-10px + 3.3203vw);
           }
           .rightArw {
-            width: 1.45vw;
-            height: 1.45vw;
+            width: calc(-10px + 3.3203vw);
+            height: calc(-10px + 3.3203vw);
           }
           p {
             display: block;
@@ -273,7 +273,7 @@
           position: relative;
           border-bottom: 1px solid #464646;
           padding: 32px 20px;
-          a {
+          .celltop {
             display: flex;
             justify-content: space-between;
             align-items: center;

@@ -73,10 +73,11 @@
           flex-wrap: wrap;
           margin-top: 19px;
           .flexcontent {
+            display: flex;
+            flex-direction: column;
             flex-basis: 50%;
             align-content: space-between;
-            span {
-              display: block;
+            div {
               height: 21px;
               font: normal 500 14px "Pretendard-Medium";
               color: #1a1a1a;
@@ -89,24 +90,21 @@
             }
             .tooltip {
               display: flex;
+              align-items: center;
               gap: 2px;
-              &::after {
+              max-width: 50px;
+              img {
+                display: inline-block;
                 width: 16px;
-                width: 16px;
-                content: "";
-                background-image: url(../img/ico_circle.png);
-                background-size: 16px;
-                background-position: center;
-                background-repeat: no-repeat;
+                height: 16px;
               }
               ~ strong {
-                &::after {
+                ~ span {
                   display: block;
                   height: 21px;
                   font: normal 500 14px "Pretendard-Medium";
                   color: #1a1a1a;
                   line-height: 150%;
-                  content: "1% per WONDER";
                 }
               }
             }
@@ -125,11 +123,10 @@
     background-color: #a484ff;
     .wonders {
       text-align: center;
-      padding: 74px 81px 72px;
+      padding: 74px 6vw 72px;
       h2 {
         display: block;
-        max-width: 859px;
-        font: normal 600 24px "Pretendard-SemiBold";
+        font: normal 600 2.3438vw "Pretendard-SemiBold";
         line-height: 140%;
       }
       p {
@@ -196,7 +193,7 @@
           .flexcontent {
             flex-basis: 50%;
             align-content: space-between;
-            span {
+            div {
               display: block;
               height: 18px;
               font: normal 500 12px "Pretendard-Medium";
@@ -210,23 +207,21 @@
             }
             .tooltip {
               display: flex;
+              align-items: center;
               gap: 2px;
-              &::after {
+              max-width: 50px;
+              img {
+                display: inline-block;
                 width: 12px;
-                content: "";
-                background-image: url(../img/ico_circle.png);
-                background-size: 12px;
-                background-position: center;
-                background-repeat: no-repeat;
+                height: 12px;
               }
               ~ strong {
-                &::after {
+                ~ span {
                   display: block;
-                  font: normal 500 12px "Pretendard-Medium";
+                  height: 21px;
+                  font: normal 500 14px "Pretendard-Medium";
                   color: #1a1a1a;
                   line-height: 150%;
-                  content: "1% per WONDER";
-                  margin-top: 4px;
                 }
               }
             }
@@ -282,7 +277,7 @@
         div {
           text-align: left;
         }
-        img {
+        button > img {
           display: block;
           position: absolute;
           cursor: pointer;
@@ -310,15 +305,12 @@
           display: inline-block;
         }
         .flexbox {
-          width: 100%;
           min-height: 90px;
           display: flex;
-          flex-wrap: wrap;
           margin-top: 17px;
-          justify-content: space-between;
           .flexcontent {
             width: 25%;
-            span {
+            div {
               display: block;
               font: normal 500 12px "Pretendard-Medium";
               color: #1a1a1a;
@@ -334,23 +326,20 @@
             }
             .tooltip {
               display: flex;
+              align-items: center;
               gap: 2px;
-              &::after {
+              max-width: 50px;
+              img {
+                display: inline-block;
                 width: 12px;
-                content: "";
-                background-image: url(../img/ico_circle.png);
-                background-size: 12px;
-                background-position: center;
-                background-repeat: no-repeat;
+                height: 12px;
               }
               ~ strong {
-                &::after {
+                ~ span {
                   display: block;
-                  max-width: 80px;
-                  font: normal 500 12px "Pretendard-Medium";
+                  font: normal 500 14px "Pretendard-Medium";
                   color: #1a1a1a;
                   line-height: 150%;
-                  content: "1% per WONDER";
                 }
               }
             }
@@ -362,4 +351,37 @@
       }
     }
   }
+}
+
+[data-tooltip-text]:hover {
+  position: relative;
+}
+
+[data-tooltip-text]:hover:after {
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  color: #ffffff;
+  font-size: 12px;
+  content: attr(data-tooltip-text);
+
+  margin-bottom: 10px;
+  top: 130%;
+  left: 0;
+  padding: 7px 12px;
+  position: absolute;
+  width: auto;
+  min-width: 50px;
+  max-width: 300px;
+  word-wrap: break-word;
+
+  z-index: 9999;
 }
